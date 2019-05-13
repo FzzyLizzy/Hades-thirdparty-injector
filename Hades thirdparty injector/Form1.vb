@@ -1,12 +1,17 @@
 ﻿Public Class Form1
     Dim DllFIle As String = "Hades.dll"
+    Dim Auto_inject_count As String
     Dim p() As Process
     'TODO: Download menu dll from this program (only if loging in to forum is a opsion)
     'TODO: display cuttent en new version in program
-    'TODO: auto inject dll in to game after x sec
-    'TODO: Clean code
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On_Steam.Checked = My.Settings.Steam
+        Auto_inject.Checked = My.Settings.Auto_inject
+        If My.Settings.Auto_inject = True Then
+            Inject_button.Visible = False
+        Else
+            Inject_button.Visible = True
+        End If
     End Sub
     Public Sub CheckGTAV_Running()
         p = Process.GetProcessesByName("GTA5")
@@ -17,6 +22,9 @@
         End If
     End Sub
     Public Sub Start_GTAV()
+        If My.Settings.Auto_inject = True Then
+            Auto_inject_Timer.Start()
+        End If
         If My.Settings.Steam = True Then
             Process.Start("steam://rungameid/271590")
         Else
@@ -59,16 +67,37 @@
             My.Settings.Steam = False
         End If
     End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub Auto_inject_CheckedChanged(sender As Object, e As EventArgs) Handles Auto_inject.CheckedChanged
+        If Auto_inject.Checked = True Then
+            My.Settings.Auto_inject = True
+            Inject_button.Visible = False
+        Else
+            My.Settings.Auto_inject = False
+            Inject_button.Visible = True
+        End If
+    End Sub
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles Inject_button.Click
         CheckGTAV_Running()
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles StartGTAV_Button.Click
         Start_GTAV()
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles Website_Button.Click
         Process.Start("https://hadesgta.com/")
+    End Sub
+
+    Private Sub Auto_inject_Timer_Tick(sender As Object, e As EventArgs) Handles Auto_inject_Timer.Tick
+        p = Process.GetProcessesByName("GTA5")
+        If p.Count > 0 Then
+            Auto_inject_count = Auto_inject_count + 1
+        End If
+
+        If Auto_inject_count = 30 Then
+            Inject()
+            Auto_inject_Timer.Stop()
+            End
+        End If
     End Sub
 End Class

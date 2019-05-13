@@ -89,6 +89,18 @@ Namespace My
                 Me("Steam") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property Auto_inject() As Boolean
+            Get
+                Return CType(Me("Auto_inject"),Boolean)
+            End Get
+            Set
+                Me("Auto_inject") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

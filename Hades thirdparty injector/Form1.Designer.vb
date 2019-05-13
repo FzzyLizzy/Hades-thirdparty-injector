@@ -22,17 +22,19 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.On_Steam = New System.Windows.Forms.CheckBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.StartGTAV_Button = New System.Windows.Forms.PictureBox()
+        Me.Website_Button = New System.Windows.Forms.PictureBox()
+        Me.Inject_button = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Auto_inject = New System.Windows.Forms.CheckBox()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Auto_inject_Timer = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.StartGTAV_Button, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Website_Button, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Inject_button, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,41 +53,41 @@ Partial Class Form1
         Me.On_Steam.Text = "On Steam"
         Me.On_Steam.UseVisualStyleBackColor = True
         '
-        'PictureBox3
+        'StartGTAV_Button
         '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.BackgroundImage = Global.Hades.My.Resources.Resources._6671756c_8d1d_48b3_a663_3634880594c4
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Location = New System.Drawing.Point(268, 151)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(193, 59)
-        Me.PictureBox3.TabIndex = 2
-        Me.PictureBox3.TabStop = False
+        Me.StartGTAV_Button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.StartGTAV_Button.BackgroundImage = Global.Hades.My.Resources.Resources._6671756c_8d1d_48b3_a663_3634880594c4
+        Me.StartGTAV_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.StartGTAV_Button.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.StartGTAV_Button.Location = New System.Drawing.Point(268, 151)
+        Me.StartGTAV_Button.Name = "StartGTAV_Button"
+        Me.StartGTAV_Button.Size = New System.Drawing.Size(193, 59)
+        Me.StartGTAV_Button.TabIndex = 2
+        Me.StartGTAV_Button.TabStop = False
         '
-        'PictureBox2
+        'Website_Button
         '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackgroundImage = Global.Hades.My.Resources.Resources._018c5eb8_3774_401f_9e5a_3c92e693d6a8
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Location = New System.Drawing.Point(524, 151)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(193, 59)
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.Website_Button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Website_Button.BackgroundImage = Global.Hades.My.Resources.Resources._018c5eb8_3774_401f_9e5a_3c92e693d6a8
+        Me.Website_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Website_Button.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Website_Button.Location = New System.Drawing.Point(524, 151)
+        Me.Website_Button.Name = "Website_Button"
+        Me.Website_Button.Size = New System.Drawing.Size(193, 59)
+        Me.Website_Button.TabIndex = 1
+        Me.Website_Button.TabStop = False
         '
-        'PictureBox1
+        'Inject_button
         '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackgroundImage = Global.Hades.My.Resources.Resources._0bce00a4_b074_4bd5_9c81_6997e08ed72f
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 151)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(193, 59)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.Inject_button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Inject_button.BackgroundImage = Global.Hades.My.Resources.Resources._0bce00a4_b074_4bd5_9c81_6997e08ed72f
+        Me.Inject_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Inject_button.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Inject_button.Location = New System.Drawing.Point(12, 151)
+        Me.Inject_button.Name = "Inject_button"
+        Me.Inject_button.Size = New System.Drawing.Size(193, 59)
+        Me.Inject_button.TabIndex = 0
+        Me.Inject_button.TabStop = False
         '
         'PictureBox4
         '
@@ -108,6 +110,10 @@ Partial Class Form1
         Me.Auto_inject.Text = "Auto inject"
         Me.Auto_inject.UseVisualStyleBackColor = True
         '
+        'Auto_inject_Timer
+        '
+        Me.Auto_inject_Timer.Interval = 1000
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -116,9 +122,9 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(730, 222)
         Me.Controls.Add(Me.Auto_inject)
         Me.Controls.Add(Me.On_Steam)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.StartGTAV_Button)
+        Me.Controls.Add(Me.Website_Button)
+        Me.Controls.Add(Me.Inject_button)
         Me.Controls.Add(Me.PictureBox4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -128,20 +134,21 @@ Partial Class Form1
         Me.MinimumSize = New System.Drawing.Size(746, 261)
         Me.Name = "Form1"
         Me.Text = "Hades menu"
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StartGTAV_Button, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Website_Button, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Inject_button, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Inject_button As PictureBox
+    Friend WithEvents Website_Button As PictureBox
+    Friend WithEvents StartGTAV_Button As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents On_Steam As CheckBox
     Friend WithEvents Auto_inject As CheckBox
+    Friend WithEvents Auto_inject_Timer As Timer
 End Class
