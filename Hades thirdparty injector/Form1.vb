@@ -1,6 +1,9 @@
 ﻿Public Class Form1
     Dim DllFIle As String = "Hades.dll"
     Dim p() As Process
+    'TODO: Download menu dll from this program (only if loging in to forum is a opsion)
+    'TODO: display cuttent en new version in program
+    'TODO: auto inject dll in to game after x sec
     Public Sub Inject()
         If System.IO.File.Exists(DllFIle) Then
             If System.IO.File.Exists("core.exe") Then
@@ -16,6 +19,7 @@
         If p.Count > 0 Then
             Inject()
         Else
+
             MessageBox.Show("start Grand theft auto V manually")
         End If
     End Sub
@@ -28,23 +32,31 @@
         GTACheck()
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+    Private Sub Start_GTAV(sender As Object, e As EventArgs) Handles PictureBox3.Click
         If My.Settings.Steam = True Then
             Process.Start("steam://rungameid/271590")
         Else
             If My.Settings.Toggle_GTA = False Then
-                MessageBox.Show("select the 'GTA V' folder")
-                If (FolderBrowserDialog1.ShowDialog() = DialogResult.OK) Then
+                Dim uninstallNode As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\")
+                For Each subKeyName As String In uninstallNode.GetSubKeyNames
 
-                    My.Settings.GTA_folder = FolderBrowserDialog1.SelectedPath
-                    My.Settings.Toggle_GTA = True
-                    My.Settings.Save()
-                    If System.IO.File.Exists(My.Settings.GTA_folder + "/PlayGTAV.exe") Then
-                        Process.Start(My.Settings.GTA_folder + "/PlayGTAV.exe")
-                    Else
-                        My.Settings.Toggle_GTA = False
-                        MessageBox.Show("cannot find the GTA v folder")
+                    Dim subKey As Microsoft.Win32.RegistryKey = uninstallNode.OpenSubKey(subKeyName)
+                    Dim displayName As String = subKey.GetValue("DisplayName")
+                    Dim InstallLocation As String = subKey.GetValue("InstallLocation")
+                    If Not displayName Is Nothing Then
+
+                        If displayName.Contains("Grand Theft Auto V") Then
+                            My.Settings.GTA_folder = InstallLocation
+                        End If
                     End If
+                Next
+                My.Settings.Toggle_GTA = True
+                My.Settings.Save()
+                If System.IO.File.Exists(My.Settings.GTA_folder + "/PlayGTAV.exe") Then
+                    Process.Start(My.Settings.GTA_folder + "/PlayGTAV.exe")
+                Else
+                    My.Settings.Toggle_GTA = False
+                    MessageBox.Show("cannot find the GTA v folder")
                 End If
             Else
                 If System.IO.File.Exists(My.Settings.GTA_folder + "/PlayGTAV.exe") Then
@@ -57,7 +69,7 @@
         End If
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub On_Steam_CheckBox(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = True Then
             My.Settings.Steam = True
         Else
