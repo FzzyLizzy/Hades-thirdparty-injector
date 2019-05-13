@@ -1,6 +1,10 @@
 # Hades thirdparty injector
 
+## Setup
+* first unpack the zip
+* download the hades dll from the forum
+* place the hedes.dll in the bin folder
+* start the hades.exe
 
-
-![Main](https://i.imgur.com/ev6hJfx.png)
-When Discord sees your injector as a game
+if you have GTAV from steam check this box
+![Steam Users](https://i.imgur.com/iwDWuyE.png)
