@@ -19,7 +19,6 @@
         If p.Count > 0 Then
             Inject()
         Else
-
             MessageBox.Show("start Grand theft auto V manually")
         End If
     End Sub
