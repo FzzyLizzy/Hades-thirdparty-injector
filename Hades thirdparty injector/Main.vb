@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Main
     Dim DllFIle As String = "Hades.dll"
     Dim Auto_inject_count As String
     Dim p() As Process
