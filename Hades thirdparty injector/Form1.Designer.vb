@@ -24,11 +24,12 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.On_Steam = New System.Windows.Forms.CheckBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Auto_inject = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,16 +40,16 @@ Partial Class Form1
         '
         Me.FolderBrowserDialog1.ShowNewFolderButton = False
         '
-        'CheckBox1
+        'On_Steam
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.ForeColor = System.Drawing.Color.White
-        Me.CheckBox1.Location = New System.Drawing.Point(5, 5)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(73, 17)
-        Me.CheckBox1.TabIndex = 4
-        Me.CheckBox1.Text = "On Steam"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.On_Steam.AutoSize = True
+        Me.On_Steam.ForeColor = System.Drawing.Color.White
+        Me.On_Steam.Location = New System.Drawing.Point(5, 5)
+        Me.On_Steam.Name = "On_Steam"
+        Me.On_Steam.Size = New System.Drawing.Size(73, 17)
+        Me.On_Steam.TabIndex = 4
+        Me.On_Steam.Text = "On Steam"
+        Me.On_Steam.UseVisualStyleBackColor = True
         '
         'PictureBox3
         '
@@ -96,13 +97,25 @@ Partial Class Form1
         Me.PictureBox4.TabIndex = 3
         Me.PictureBox4.TabStop = False
         '
+        'Auto_inject
+        '
+        Me.Auto_inject.AutoSize = True
+        Me.Auto_inject.ForeColor = System.Drawing.Color.White
+        Me.Auto_inject.Location = New System.Drawing.Point(5, 28)
+        Me.Auto_inject.Name = "Auto_inject"
+        Me.Auto_inject.Size = New System.Drawing.Size(76, 17)
+        Me.Auto_inject.TabIndex = 5
+        Me.Auto_inject.Text = "Auto inject"
+        Me.Auto_inject.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuText
         Me.ClientSize = New System.Drawing.Size(730, 222)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Auto_inject)
+        Me.Controls.Add(Me.On_Steam)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -129,5 +142,6 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents On_Steam As CheckBox
+    Friend WithEvents Auto_inject As CheckBox
 End Class

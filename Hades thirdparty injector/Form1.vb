@@ -4,34 +4,19 @@
     'TODO: Download menu dll from this program (only if loging in to forum is a opsion)
     'TODO: display cuttent en new version in program
     'TODO: auto inject dll in to game after x sec
-    Public Sub Inject()
-        If System.IO.File.Exists(DllFIle) Then
-            If System.IO.File.Exists("core.exe") Then
-                Process.Start("core.exe", "--process-name GTA5.exe --inject " + DllFIle)
-            End If
-        Else
-            MessageBox.Show("cannot find :" + DllFIle)
-            Process.Start("https://hadesgta.com/forum/index.php?forums/15/")
-        End If
+    'TODO: Clean code
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        On_Steam.Checked = My.Settings.Steam
     End Sub
-    Public Sub GTACheck()
+    Public Sub CheckGTAV_Running()
         p = Process.GetProcessesByName("GTA5")
         If p.Count > 0 Then
             Inject()
         Else
-            MessageBox.Show("start Grand theft auto V manually")
+            Start_GTAV()
         End If
     End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        Process.Start("https://hadesgta.com/")
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        GTACheck()
-    End Sub
-
-    Private Sub Start_GTAV(sender As Object, e As EventArgs) Handles PictureBox3.Click
+    Public Sub Start_GTAV()
         If My.Settings.Steam = True Then
             Process.Start("steam://rungameid/271590")
         Else
@@ -49,34 +34,41 @@
                         End If
                     End If
                 Next
-                My.Settings.Toggle_GTA = True
-                My.Settings.Save()
                 If System.IO.File.Exists(My.Settings.GTA_folder + "/PlayGTAV.exe") Then
                     Process.Start(My.Settings.GTA_folder + "/PlayGTAV.exe")
                 Else
-                    My.Settings.Toggle_GTA = False
-                    MessageBox.Show("cannot find the GTA v folder")
-                End If
-            Else
-                If System.IO.File.Exists(My.Settings.GTA_folder + "/PlayGTAV.exe") Then
-                    Process.Start(My.Settings.GTA_folder + "/PlayGTAV.exe")
-                Else
-                    MessageBox.Show("start Grand theft auto V manually")
-                    My.Settings.Toggle_GTA = False
+                    MessageBox.Show("Cannot find Grand Theft Auto V")
                 End If
             End If
         End If
     End Sub
-
-    Private Sub On_Steam_CheckBox(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = True Then
+    Public Sub Inject()
+        If System.IO.File.Exists("bin\" + DllFIle) Then
+            If System.IO.File.Exists("bin\core.exe") Then
+                Process.Start("bin\core.exe", "--process-name GTA5.exe --inject " + DllFIle)
+            End If
+        Else
+            MessageBox.Show("cannot find :" + DllFIle)
+            Process.Start("https://hadesgta.com/forum/index.php?forums/15/")
+        End If
+    End Sub
+    Private Sub On_Steam_CheckBox(sender As Object, e As EventArgs) Handles On_Steam.CheckedChanged
+        If On_Steam.Checked = True Then
             My.Settings.Steam = True
         Else
             My.Settings.Steam = False
         End If
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckBox1.Checked = My.Settings.Steam
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        CheckGTAV_Running()
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Start_GTAV()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Process.Start("https://hadesgta.com/")
     End Sub
 End Class
