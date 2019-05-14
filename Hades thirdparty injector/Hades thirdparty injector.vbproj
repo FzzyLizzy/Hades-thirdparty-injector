@@ -131,6 +131,7 @@
     <None Include="Resources\0bce00a4-b074-4bd5-9c81-6997e08ed72f.png" />
     <None Include="Resources\6671756c-8d1d-48b3-a663-3634880594c4.png" />
     <None Include="Resources\018c5eb8-3774-401f-9e5a-3c92e693d6a8.png" />
+    <None Include="Resources\5135e120-f62a-4d84-be14-7bc79b2c966f.png" />
     <Content Include="skull_red.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

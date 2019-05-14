@@ -1,10 +1,12 @@
 ﻿Public Class Main
     Dim DllFIle As String = "Hades.dll"
+    Dim Version As String = "2.3.0"
     Dim Auto_inject_count As String
     Dim p() As Process
     'TODO: Download menu dll from this program (only if loging in to forum is a opsion)
     'TODO: display cuttent en new version in program
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Version_txt.Text = Version
         On_Steam.Checked = My.Settings.Steam
         Auto_inject.Checked = My.Settings.Auto_inject
         If My.Settings.Auto_inject = True Then
