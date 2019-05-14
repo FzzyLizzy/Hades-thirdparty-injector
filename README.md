@@ -3,7 +3,7 @@
 ## Setup
 * first unpack the zip
 * download the hades dll from the forum
-* place the hedes.dll in the bin folder
+* Drag and Drop the dll file on the injector
 * start the hades.exe
 
 if you have GTAV from steam check this box
