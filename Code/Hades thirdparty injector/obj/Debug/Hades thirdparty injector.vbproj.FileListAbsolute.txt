@@ -22,3 +22,15 @@ D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.ex
 D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.xml
 D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.pdb
 D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.Main.resources
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\bin\Debug\Hades.exe.config
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\bin\Debug\Hades.exe
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\bin\Debug\Hades.pdb
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\bin\Debug\Hades.xml
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades thirdparty injector.vbprojAssemblyReference.cache
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades.Main.resources
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades.Resources.resources
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades thirdparty injector.vbproj.GenerateResource.cache
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades thirdparty injector.vbproj.CoreCompileInputs.cache
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades.exe
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades.xml
+D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades.pdb

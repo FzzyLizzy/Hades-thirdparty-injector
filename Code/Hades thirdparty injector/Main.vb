@@ -9,10 +9,24 @@
         Version_txt.Text = Version
         On_Steam.Checked = My.Settings.Steam
         Auto_inject.Checked = My.Settings.Auto_inject
+        Try
+            CheckForUpdates()
+        Catch ex As Exception
+        End Try
         If My.Settings.Auto_inject = True Then
             Inject_button.Visible = False
         Else
             Inject_button.Visible = True
+        End If
+    End Sub
+    Public Sub CheckForUpdates()
+        Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Bin/Version.bin")
+        Dim response As System.Net.HttpWebResponse = request.GetResponse()
+        Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
+        Dim newestversion As String = sr.ReadToEnd()
+        If newestversion = Version Then
+        Else
+            Update_Button.Visible = True
         End If
     End Sub
     Public Sub CheckGTAV_Running()
@@ -87,7 +101,7 @@
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles Website_Button.Click
-        Process.Start("https://hadesgta.com/")
+        Process.Start("https://hadesgta.com/forum/index.php")
     End Sub
 
     Private Sub Auto_inject_Timer_Tick(sender As Object, e As EventArgs) Handles Auto_inject_Timer.Tick
