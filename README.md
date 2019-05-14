@@ -13,4 +13,5 @@ if you have GTAV from steam check this box
 * start the hades.exe
 * check the box auto inject
 * press Start GTAV
+
 ![Auto Inject](https://i.imgur.com/R542eYD.png)
