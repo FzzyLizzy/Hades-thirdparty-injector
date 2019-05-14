@@ -1,4 +1,6 @@
-﻿Public Class Main
+﻿Imports System.IO
+Imports System.Runtime
+Public Class Main
     Dim DllFIle As String = "Hades.dll"
     Dim Version As String = "2.3.0"
     Dim Auto_inject_count As String
@@ -114,6 +116,24 @@
             Inject()
             Auto_inject_Timer.Stop()
             End
+        End If
+    End Sub
+    Private Sub Main_DragEnter(sender As Object, e As DragEventArgs) Handles Me.DragEnter
+        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+            e.Effect = DragDropEffects.Copy
+        End If
+    End Sub
+
+    Private Sub Main_DragDrop(sender As Object, e As DragEventArgs) Handles Me.DragDrop
+        Dim strPath As String = Directory.GetCurrentDirectory()
+        Dim p As String = e.Data.GetData(DataFormats.FileDrop)(0)
+        Dim extension As String = Path.GetExtension(p)
+        If extension = ".dll" Then
+            If System.IO.File.Exists(strPath + "\bin\" + DllFIle) Then
+                My.Computer.FileSystem.DeleteFile(strPath + "\bin\" + DllFIle)
+            End If
+            My.Computer.FileSystem.MoveFile(p, strPath + "\bin\" + DllFIle)
+            MessageBox.Show("Menu successfully installed")
         End If
     End Sub
 End Class

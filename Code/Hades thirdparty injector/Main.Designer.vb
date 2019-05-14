@@ -74,7 +74,7 @@ Partial Class Main
         'Update_Button
         '
         Me.Update_Button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Update_Button.BackgroundImage = Global.Hades.My.Resources.Resources._5135e120_f62a_4d84_be14_7bc79b2c966f
+        Me.Update_Button.BackgroundImage = Global.Hades.My.Resources.Resources.Update
         Me.Update_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Update_Button.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Update_Button.Location = New System.Drawing.Point(524, 151)
@@ -87,7 +87,7 @@ Partial Class Main
         'StartGTAV_Button
         '
         Me.StartGTAV_Button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.StartGTAV_Button.BackgroundImage = Global.Hades.My.Resources.Resources._6671756c_8d1d_48b3_a663_3634880594c4
+        Me.StartGTAV_Button.BackgroundImage = Global.Hades.My.Resources.Resources.Start_GTAV
         Me.StartGTAV_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.StartGTAV_Button.Cursor = System.Windows.Forms.Cursors.Hand
         Me.StartGTAV_Button.Location = New System.Drawing.Point(268, 151)
@@ -99,7 +99,7 @@ Partial Class Main
         'Website_Button
         '
         Me.Website_Button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Website_Button.BackgroundImage = Global.Hades.My.Resources.Resources._018c5eb8_3774_401f_9e5a_3c92e693d6a8
+        Me.Website_Button.BackgroundImage = Global.Hades.My.Resources.Resources.Website
         Me.Website_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Website_Button.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Website_Button.Location = New System.Drawing.Point(524, 151)
@@ -111,7 +111,7 @@ Partial Class Main
         'Inject_button
         '
         Me.Inject_button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Inject_button.BackgroundImage = Global.Hades.My.Resources.Resources._0bce00a4_b074_4bd5_9c81_6997e08ed72f
+        Me.Inject_button.BackgroundImage = Global.Hades.My.Resources.Resources.Inject
         Me.Inject_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Inject_button.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Inject_button.Location = New System.Drawing.Point(12, 151)
@@ -122,7 +122,7 @@ Partial Class Main
         '
         'PictureBox4
         '
-        Me.PictureBox4.BackgroundImage = Global.Hades.My.Resources.Resources._2019_05_08
+        Me.PictureBox4.BackgroundImage = Global.Hades.My.Resources.Resources.BackGround
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox4.Location = New System.Drawing.Point(12, -56)
         Me.PictureBox4.Name = "PictureBox4"
@@ -143,6 +143,7 @@ Partial Class Main
         '
         'Main
         '
+        Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuText
