@@ -1,8 +1,8 @@
 ﻿Imports System.IO
 Imports System.Runtime
 Public Class Main
-    Dim DllFIle As String = "Hades.dll"
     Dim Version As String = "2.3.0"
+    Dim DllFIle As String = "Hades.dll"
     Dim Auto_inject_count As String
     Dim p() As Process
     'TODO: Download menu dll from this program (only if loging in to forum is a opsion)
@@ -26,7 +26,7 @@ Public Class Main
         Dim response As System.Net.HttpWebResponse = request.GetResponse()
         Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
         Dim newestversion As String = sr.ReadToEnd()
-        If not newestversion = Version Then
+        If Not newestversion = Version Then
             Update_Button.Visible = True
         End If
     End Sub
@@ -62,7 +62,8 @@ Public Class Main
                 If System.IO.File.Exists(My.Settings.GTA_folder + "/PlayGTAV.exe") Then
                     Process.Start(My.Settings.GTA_folder + "/PlayGTAV.exe")
                 Else
-                    MessageBox.Show("Cannot find Grand Theft Auto V")
+                    MessageBox.Show("ERROR
+Grand Theft Auto V Not found")
                 End If
             End If
         End If
