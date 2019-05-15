@@ -26,8 +26,7 @@ Public Class Main
         Dim response As System.Net.HttpWebResponse = request.GetResponse()
         Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
         Dim newestversion As String = sr.ReadToEnd()
-        If newestversion = Version Then
-        Else
+        If not newestversion = Version Then
             Update_Button.Visible = True
         End If
     End Sub
