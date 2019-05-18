@@ -1,16 +1,13 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
+Imports System.IO
 Imports System.Runtime
 Public Class Main
     Dim DllFIle As String = "Hades.dll"
-    Dim Version As String = "2.3.0"
     Dim Auto_inject_count As String
     Dim p() As Process
     'TODO: Download menu dll from this program (only if loging in to forum is a opsion)
     'TODO: display cuttent en new version in program
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Version_txt.Text = Version
-        On_Steam.Checked = My.Settings.Steam
-        Auto_inject.Checked = My.Settings.Auto_inject
         Try
             CheckForUpdates()
         Catch ex As Exception
@@ -26,7 +23,7 @@ Public Class Main
         Dim response As System.Net.HttpWebResponse = request.GetResponse()
         Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
         Dim newestversion As String = sr.ReadToEnd()
-        If newestversion = Version Then
+        If newestversion = JVersion Then
         Else
             Update_Button.Visible = True
         End If
@@ -78,22 +75,6 @@ Public Class Main
             Process.Start("https://hadesgta.com/forum/index.php?forums/15/")
         End If
     End Sub
-    Private Sub On_Steam_CheckBox(sender As Object, e As EventArgs) Handles On_Steam.CheckedChanged
-        If On_Steam.Checked = True Then
-            My.Settings.Steam = True
-        Else
-            My.Settings.Steam = False
-        End If
-    End Sub
-    Private Sub Auto_inject_CheckedChanged(sender As Object, e As EventArgs) Handles Auto_inject.CheckedChanged
-        If Auto_inject.Checked = True Then
-            My.Settings.Auto_inject = True
-            Inject_button.Visible = False
-        Else
-            My.Settings.Auto_inject = False
-            Inject_button.Visible = True
-        End If
-    End Sub
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles Inject_button.Click
         CheckGTAV_Running()
     End Sub
@@ -135,5 +116,16 @@ Public Class Main
             My.Computer.FileSystem.MoveFile(p, strPath + "\bin\" + DllFIle)
             MessageBox.Show("Menu successfully installed")
         End If
+    End Sub
+
+    Private Sub settings_button_Click(sender As Object, e As EventArgs) Handles settings_button.Click
+        Dim SecondForm As New Settings
+        My.Settings.Save()
+        SecondForm.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        End
     End Sub
 End Class
