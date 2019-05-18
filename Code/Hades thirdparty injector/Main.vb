@@ -60,7 +60,8 @@ Public Class Main
                 If System.IO.File.Exists(My.Settings.GTA_folder + "/PlayGTAV.exe") Then
                     Process.Start(My.Settings.GTA_folder + "/PlayGTAV.exe")
                 Else
-                    MessageBox.Show("Cannot find Grand Theft Auto V")
+                    MessageBox.Show("ERROR
+Grand Theft Auto V Not found")
                 End If
             End If
         End If

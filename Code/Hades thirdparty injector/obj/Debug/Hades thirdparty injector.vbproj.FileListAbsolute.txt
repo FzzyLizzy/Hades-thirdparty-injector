@@ -34,4 +34,3 @@ D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\bin\Debug\Had
 D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades-Injector.exe
 D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades-Injector.xml
 D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades-Injector.pdb
-D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades.Settings.resources
