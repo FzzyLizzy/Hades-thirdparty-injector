@@ -22,13 +22,14 @@ Partial Class Settings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settings))
         Me.Auto_inject = New System.Windows.Forms.CheckBox()
         Me.On_Steam = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GTA_location_txt = New System.Windows.Forms.Label()
-        Me.injector_version_txt = New System.Windows.Forms.Label()
         Me.Hades_ins_txt = New System.Windows.Forms.Label()
+        Me.injector_version_txt = New System.Windows.Forms.Label()
+        Me.GTA_location_txt = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -89,17 +90,17 @@ Partial Class Settings
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Information"
         '
-        'GTA_location_txt
+        'Hades_ins_txt
         '
-        Me.GTA_location_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Hades_ins_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GTA_location_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GTA_location_txt.Location = New System.Drawing.Point(6, 62)
-        Me.GTA_location_txt.Name = "GTA_location_txt"
-        Me.GTA_location_txt.Size = New System.Drawing.Size(394, 23)
-        Me.GTA_location_txt.TabIndex = 0
-        Me.GTA_location_txt.Text = "GTA location:"
-        Me.GTA_location_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Hades_ins_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Hades_ins_txt.Location = New System.Drawing.Point(6, 39)
+        Me.Hades_ins_txt.Name = "Hades_ins_txt"
+        Me.Hades_ins_txt.Size = New System.Drawing.Size(394, 23)
+        Me.Hades_ins_txt.TabIndex = 2
+        Me.Hades_ins_txt.Text = "Hades installed:"
+        Me.Hades_ins_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'injector_version_txt
         '
@@ -113,17 +114,17 @@ Partial Class Settings
         Me.injector_version_txt.Text = "Injector version:"
         Me.injector_version_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Hades_ins_txt
+        'GTA_location_txt
         '
-        Me.Hades_ins_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GTA_location_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Hades_ins_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Hades_ins_txt.Location = New System.Drawing.Point(6, 39)
-        Me.Hades_ins_txt.Name = "Hades_ins_txt"
-        Me.Hades_ins_txt.Size = New System.Drawing.Size(394, 23)
-        Me.Hades_ins_txt.TabIndex = 2
-        Me.Hades_ins_txt.Text = "Hades installed:"
-        Me.Hades_ins_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.GTA_location_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GTA_location_txt.Location = New System.Drawing.Point(6, 62)
+        Me.GTA_location_txt.Name = "GTA_location_txt"
+        Me.GTA_location_txt.Size = New System.Drawing.Size(394, 23)
+        Me.GTA_location_txt.TabIndex = 0
+        Me.GTA_location_txt.Text = "GTA location:"
+        Me.GTA_location_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Settings
         '
@@ -134,10 +135,10 @@ Partial Class Settings
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(446, 236)
         Me.Name = "Settings"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
         Me.Text = "Settings & Info"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

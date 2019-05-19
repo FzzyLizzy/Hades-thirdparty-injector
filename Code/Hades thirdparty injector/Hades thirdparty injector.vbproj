@@ -48,7 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>skull_red.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -143,6 +143,7 @@
     <None Include="Resources\018c5eb8-3774-401f-9e5a-3c92e693d6a8.png" />
     <None Include="Resources\5135e120-f62a-4d84-be14-7bc79b2c966f.png" />
     <None Include="Resources\settings.png" />
+    <Content Include="icon.ico" />
     <Content Include="skull_red.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

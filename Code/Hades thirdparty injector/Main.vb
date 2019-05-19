@@ -19,21 +19,13 @@ Public Class Main
         End If
     End Sub
     Public Sub CheckForUpdates()
-        Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Bin/Version.bin")
+        Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Release/Version.bin")
         Dim response As System.Net.HttpWebResponse = request.GetResponse()
         Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
         Dim newestversion As String = sr.ReadToEnd()
         If newestversion = JVersion Then
         Else
             Update_Button.Visible = True
-        End If
-    End Sub
-    Public Sub CheckGTAV_Running()
-        p = Process.GetProcessesByName("GTA5")
-        If p.Count > 0 Then
-            Inject()
-        Else
-            Start_GTAV()
         End If
     End Sub
     Public Sub Start_GTAV()
@@ -77,7 +69,7 @@ Grand Theft Auto V Not found")
         End If
     End Sub
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles Inject_button.Click
-        CheckGTAV_Running()
+        Inject()
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles StartGTAV_Button.Click
