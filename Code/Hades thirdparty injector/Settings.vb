@@ -41,10 +41,12 @@ Public Class Settings
         End If
     End Sub
     Public Sub hades_installed()
-        If System.IO.File.Exists("bin\Hades.dll") Then
+        If System.IO.File.Exists("bin\" + DllFIle) Then
             Hades_ins_txt.Text = "Hades installed: Yes"
+            Hades_location_txt.Text = "Hades location: " + strPath + "bin\" + DllFIle
         Else
             Hades_ins_txt.Text = "Hades installed: No"
+            Hades_location_txt.Text = "Hades location: "
         End If
     End Sub
 

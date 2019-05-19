@@ -2,7 +2,6 @@
 Imports System.IO
 Imports System.Runtime
 Public Class Main
-    Dim DllFIle As String = "Hades.dll"
     Dim Auto_inject_count As String
     Dim p() As Process
     'TODO: Download menu dll from this program (only if loging in to forum is a opsion)
@@ -99,7 +98,6 @@ Grand Theft Auto V Not found")
     End Sub
 
     Private Sub Main_DragDrop(sender As Object, e As DragEventArgs) Handles Me.DragDrop
-        Dim strPath As String = Directory.GetCurrentDirectory()
         Dim p As String = e.Data.GetData(DataFormats.FileDrop)(0)
         Dim extension As String = Path.GetExtension(p)
         If extension = ".dll" Then
