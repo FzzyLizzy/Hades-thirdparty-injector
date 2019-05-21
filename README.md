@@ -7,11 +7,11 @@
 * Drag and Drop the dll file on the injector
 
 If you have GTAV from steam check this box
-![Steam Users](https://i.imgur.com/iwDWuyE.png)
+![Steam Users](https://i.imgur.com/e0WqFg1.png)
 
 ## how to use auto inject
 * Start the hades.exe
 * Check the box auto inject
 * Press Start GTAV
 
-![Auto Inject](https://i.imgur.com/R542eYD.png)
+![Auto Inject](https://i.imgur.com/7FRh4id.png)
