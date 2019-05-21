@@ -1,5 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.IO
+Imports System.Net
+Imports System.Net.WebClient.DownloadFile
 Imports System.Runtime
 Public Class Main
     Dim Auto_inject_count As String
@@ -118,5 +120,27 @@ Grand Theft Auto V Not found")
 
     Private Sub Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         End
+    End Sub
+
+    Private Sub Update_Button_Click(sender As Object, e As EventArgs) Handles Update_Button.Click
+        Dim remoteUri As String = "https://github.com/DeadlyKltten/Hades-thirdparty-injector/raw/master/Release/Hades-Injector.exe"
+        Dim fileName As String = "Hades-Injector.Update"
+        Using client As New WebClient()
+            client.DownloadFile(remoteUri, fileName)
+        End Using
+        If System.IO.File.Exists("Hades-Injector.Update") Then
+            Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe")
+            End
+        Else
+            check_updateFile()
+        End If
+    End Sub
+    Public Sub check_updateFile()
+        If System.IO.File.Exists("Hades-Injector.Update") Then
+            Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe")
+            End
+        Else
+            check_updateFile()
+        End If
     End Sub
 End Class
