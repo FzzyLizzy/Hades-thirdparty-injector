@@ -9,7 +9,10 @@
 If you have GTAV from steam check this box
 ![Steam Users](https://i.imgur.com/e0WqFg1.png)
 
-## how to use auto inject
+## How to install the menu
+![Install](https://i.imgur.com/cSB1YYZ.gif)
+
+## How to use auto inject
 * Start the hades.exe
 * Check the box auto inject
 * Press Start GTAV
