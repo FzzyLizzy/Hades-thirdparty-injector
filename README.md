@@ -3,7 +3,7 @@ Injector Version 2.3.2
 [Download Injector](https://github.com/DeadlyKltten/Hades-thirdparty-injector/releases/download/2.3.2/Injector-V2.3.2.zip)
 
 ### Why Third Party
-I am not a DEV van Hades myself, but I like to make programs
+I am not a Dev of Hades myself, but I like to make programs
 
 ## Setup
 * First unpack the zip
