@@ -4,6 +4,7 @@ Public Class Settings
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Auto_inject.Checked = My.Settings.Auto_inject
         On_Steam.Checked = My.Settings.Steam
+        Close_after.Checked = My.Settings.Close_After
         injector_version_txt.Text = "Injector version: " + JVersion
         GTA_location()
         hades_installed()
@@ -43,7 +44,7 @@ Public Class Settings
     Public Sub hades_installed()
         If System.IO.File.Exists("bin\" + DllFIle) Then
             Hades_ins_txt.Text = "Hades installed: Yes"
-            Hades_location_txt.Text = "Hades location: " + strPath + "bin\" + DllFIle
+            Hades_location_txt.Text = "Hades location: " + strPath + "\bin\" + DllFIle
         Else
             Hades_ins_txt.Text = "Hades installed: No"
             Hades_location_txt.Text = "Hades location: "
@@ -57,6 +58,14 @@ Public Class Settings
         Else
             My.Settings.Steam = False
             GTA_location()
+        End If
+    End Sub
+
+    Private Sub Close_after_CheckedChanged(sender As Object, e As EventArgs) Handles Close_after.CheckedChanged
+        If Close_after.Checked = True Then
+            My.Settings.Close_After = True
+        Else
+            My.Settings.Close_After = False
         End If
     End Sub
 End Class

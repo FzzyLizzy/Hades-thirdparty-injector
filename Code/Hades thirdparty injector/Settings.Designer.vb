@@ -27,14 +27,18 @@ Partial Class Settings
         Me.On_Steam = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GTA_location_txt = New System.Windows.Forms.Label()
         Me.Hades_ins_txt = New System.Windows.Forms.Label()
         Me.injector_version_txt = New System.Windows.Forms.Label()
+        Me.GTA_location_txt = New System.Windows.Forms.Label()
         Me.Hades_location_txt = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Close_after = New System.Windows.Forms.CheckBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Auto_inject
@@ -66,12 +70,13 @@ Partial Class Settings
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.Black
+        Me.GroupBox1.Controls.Add(Me.Close_after)
         Me.GroupBox1.Controls.Add(Me.On_Steam)
         Me.GroupBox1.Controls.Add(Me.Auto_inject)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(532, 73)
+        Me.GroupBox1.Size = New System.Drawing.Size(532, 100)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Injector Settings"
@@ -84,24 +89,12 @@ Partial Class Settings
         Me.GroupBox2.Controls.Add(Me.injector_version_txt)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 91)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 118)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(532, 85)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Information"
-        '
-        'GTA_location_txt
-        '
-        Me.GTA_location_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GTA_location_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GTA_location_txt.Location = New System.Drawing.Point(3, 45)
-        Me.GTA_location_txt.Name = "GTA_location_txt"
-        Me.GTA_location_txt.Size = New System.Drawing.Size(520, 29)
-        Me.GTA_location_txt.TabIndex = 0
-        Me.GTA_location_txt.Text = "GTA location:"
-        Me.GTA_location_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Hades_ins_txt
         '
@@ -127,6 +120,18 @@ Partial Class Settings
         Me.injector_version_txt.Text = "Injector version:"
         Me.injector_version_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'GTA_location_txt
+        '
+        Me.GTA_location_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GTA_location_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GTA_location_txt.Location = New System.Drawing.Point(3, 45)
+        Me.GTA_location_txt.Name = "GTA_location_txt"
+        Me.GTA_location_txt.Size = New System.Drawing.Size(520, 29)
+        Me.GTA_location_txt.TabIndex = 0
+        Me.GTA_location_txt.Text = "GTA location:"
+        Me.GTA_location_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Hades_location_txt
         '
         Me.Hades_location_txt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -141,38 +146,85 @@ Partial Class Settings
         '
         'GroupBox3
         '
-        Me.GroupBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox3.Controls.Add(Me.GTA_location_txt)
         Me.GroupBox3.Controls.Add(Me.Hades_location_txt)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 179)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 209)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(532, 85)
+        Me.GroupBox3.Size = New System.Drawing.Size(532, 78)
         Me.GroupBox3.TabIndex = 10
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Locations"
+        '
+        'Close_after
+        '
+        Me.Close_after.AutoSize = True
+        Me.Close_after.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Close_after.ForeColor = System.Drawing.Color.White
+        Me.Close_after.Location = New System.Drawing.Point(6, 71)
+        Me.Close_after.Name = "Close_after"
+        Me.Close_after.Size = New System.Drawing.Size(143, 20)
+        Me.Close_after.TabIndex = 8
+        Me.Close_after.Text = "Close after injection"
+        Me.Close_after.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox4.Controls.Add(Me.TextBox1)
+        Me.GroupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.GroupBox4.ForeColor = System.Drawing.Color.White
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 294)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(532, 92)
+        Me.GroupBox4.TabIndex = 11
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Changelog"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.BackColor = System.Drawing.Color.Black
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.TextBox1.ForeColor = System.Drawing.Color.White
+        Me.TextBox1.Location = New System.Drawing.Point(6, 11)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox1.Size = New System.Drawing.Size(526, 77)
+        Me.TextBox1.TabIndex = 0
+        Me.TextBox1.Text = "Auto update to the latest version" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Auto inject" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Drag en drop the dll" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Updated UI"
         '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(556, 277)
+        Me.ClientSize = New System.Drawing.Size(556, 398)
+        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.Color.White
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(572, 316)
+        Me.MinimumSize = New System.Drawing.Size(572, 437)
         Me.Name = "Settings"
         Me.Text = "Settings & Info"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -186,4 +238,7 @@ Partial Class Settings
     Friend WithEvents Hades_ins_txt As Label
     Friend WithEvents Hades_location_txt As Label
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Close_after As CheckBox
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents TextBox1 As TextBox
 End Class

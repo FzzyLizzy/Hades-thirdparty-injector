@@ -57,12 +57,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property GTA_folder() As String
+        Public Property GTA_Folder() As String
             Get
-                Return CType(Me("GTA_folder"),String)
+                Return CType(Me("GTA_Folder"),String)
             End Get
             Set
-                Me("GTA_folder") = value
+                Me("GTA_Folder") = value
             End Set
         End Property
         
@@ -99,6 +99,18 @@ Namespace My
             End Get
             Set
                 Me("Auto_inject") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property Close_After() As Boolean
+            Get
+                Return CType(Me("Close_After"),Boolean)
+            End Get
+            Set
+                Me("Close_After") = value
             End Set
         End Property
     End Class

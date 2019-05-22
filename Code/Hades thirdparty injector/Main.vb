@@ -13,11 +13,6 @@ Public Class Main
             CheckForUpdates()
         Catch ex As Exception
         End Try
-        If My.Settings.Auto_inject = True Then
-            Inject_button.Visible = False
-        Else
-            Inject_button.Visible = True
-        End If
     End Sub
     Public Sub CheckForUpdates()
         Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Release/Version.bin")
@@ -46,12 +41,12 @@ Public Class Main
                     If Not displayName Is Nothing Then
 
                         If displayName.Contains("Grand Theft Auto V") Then
-                            My.Settings.GTA_folder = InstallLocation
+                            My.Settings.GTA_Folder = InstallLocation
                         End If
                     End If
                 Next
-                If System.IO.File.Exists(My.Settings.GTA_folder + "/PlayGTAV.exe") Then
-                    Process.Start(My.Settings.GTA_folder + "/PlayGTAV.exe")
+                If System.IO.File.Exists(My.Settings.GTA_Folder + "/PlayGTAV.exe") Then
+                    Process.Start(My.Settings.GTA_Folder + "/PlayGTAV.exe")
                 Else
                     MessageBox.Show("ERROR
 Grand Theft Auto V Not found")
@@ -63,6 +58,9 @@ Grand Theft Auto V Not found")
         If System.IO.File.Exists("bin\" + DllFIle) Then
             If System.IO.File.Exists("bin\core.exe") Then
                 Process.Start("bin\core.exe", "--process-name GTA5.exe --inject " + DllFIle)
+                If My.Settings.Close_After = True Then
+                    End
+                End If
             End If
         Else
             MessageBox.Show("cannot find :" + DllFIle)
@@ -90,7 +88,9 @@ Grand Theft Auto V Not found")
         If Auto_inject_count = 30 Then
             Inject()
             Auto_inject_Timer.Stop()
-            End
+            If My.Settings.Close_After = True Then
+                End
+            End If
         End If
     End Sub
     Private Sub Main_DragEnter(sender As Object, e As DragEventArgs) Handles Me.DragEnter
@@ -131,7 +131,7 @@ Grand Theft Auto V Not found")
         If System.IO.File.Exists("Hades-Injector.Update") Then
             Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe")
             End
-        Else
+            Else
             check_updateFile()
         End If
     End Sub
