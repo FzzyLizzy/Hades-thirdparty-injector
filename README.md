@@ -1,6 +1,10 @@
-# Hades thirdparty injector
-Injector Version 2.3.2
-[Download](https://github.com/DeadlyKltten/Hades-thirdparty-injector/releases/download/2.3.2/Injector-V2.3.2.zip)
+![GitHub release](https://img.shields.io/github/release-pre/DeadlyKltten/Hades-thirdparty-injector.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/DeadlyKltten/Hades-thirdparty-injector/total.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/DeadlyKltten/Hades-thirdparty-injector.svg)
+[![GitHub license](https://img.shields.io/github/license/DeadlyKltten/Hades-thirdparty-injector.svg)](https://github.com/DeadlyKltten/Hades-thirdparty-injector/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/DeadlyKltten/Hades-thirdparty-injector.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FDeadlyKltten%2FHades-thirdparty-injector)
+# Hades thirdparty injector 
+[Download Injector](https://github.com/DeadlyKltten/Hades-thirdparty-injector/releases/download/2.3.2/Injector-V2.3.2.zip)
 
 ### Why Third Party
 I am not a Dev of Hades myself, but I like to make programs
