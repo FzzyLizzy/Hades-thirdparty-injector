@@ -1,3 +1,4 @@
+![Online](https://img.shields.io/badge/Injector-Online-green.svg)
 ![GitHub tag (latest by date)](https://img.shields.io/github/tag-date/DeadlyKltten/Hades-thirdparty-injector.svg?label=Version)
 ![GitHub last commit](https://img.shields.io/github/last-commit/DeadlyKltten/Hades-thirdparty-injector.svg)
 [![GitHub license](https://img.shields.io/github/license/DeadlyKltten/Hades-thirdparty-injector.svg)](https://github.com/DeadlyKltten/Hades-thirdparty-injector/blob/master/LICENSE)
