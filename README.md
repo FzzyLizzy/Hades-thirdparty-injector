@@ -1,4 +1,4 @@
-![GitHub release](https://img.shields.io/github/release-pre/DeadlyKltten/Hades-thirdparty-injector.svg)
+![GitHub tag (latest by date)](https://img.shields.io/github/tag-date/DeadlyKltten/Hades-thirdparty-injector.svg?label=Version)
 ![GitHub last commit](https://img.shields.io/github/last-commit/DeadlyKltten/Hades-thirdparty-injector.svg)
 [![GitHub license](https://img.shields.io/github/license/DeadlyKltten/Hades-thirdparty-injector.svg)](https://github.com/DeadlyKltten/Hades-thirdparty-injector/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/DeadlyKltten/Hades-thirdparty-injector.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FDeadlyKltten%2FHades-thirdparty-injector)
