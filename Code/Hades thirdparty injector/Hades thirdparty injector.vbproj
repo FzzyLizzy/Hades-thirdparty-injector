@@ -144,6 +144,8 @@
     <None Include="Resources\5135e120-f62a-4d84-be14-7bc79b2c966f.png" />
     <None Include="Resources\settings.png" />
     <Content Include="icon.ico" />
+    <None Include="Resources\Inject2.png" />
+    <None Include="Resources\X.png" />
     <Content Include="skull_red.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -32,6 +32,11 @@ Hades-Injector
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Hades.My.Resources.Resources.Inject2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Hades.My.Resources.Resources.settings">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -48,6 +53,11 @@ Hades-Injector
 </summary>
 </member>
 <member name="P:Hades.My.Resources.Resources.Website">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hades.My.Resources.Resources.X">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

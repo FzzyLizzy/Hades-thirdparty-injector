@@ -13,6 +13,7 @@ Public Class Main
             CheckForUpdates()
         Catch ex As Exception
         End Try
+        Core_check()
     End Sub
     Public Sub CheckForUpdates()
         Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Release/Version.bin")
@@ -141,6 +142,34 @@ Grand Theft Auto V Not found")
             End
         Else
             check_updateFile()
+        End If
+    End Sub
+
+    Private Sub PictureBox2_Click_1(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        My.Settings.Save()
+        End
+    End Sub
+    Dim drag As Boolean
+    Dim mousex As Integer
+    Dim mousey As Integer
+    Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Hades_logo.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Hades_logo.MouseMove
+        If drag Then
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+        End If
+    End Sub
+    Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Hades_logo.MouseUp
+        drag = False
+    End Sub
+    Public Sub Core_check()
+        If Not System.IO.File.Exists("bin\core.exe") Then
+            Core_Error.Visible = True
+            Core_Error.Text = "WARNING core not found Injector will not work"
         End If
     End Sub
 End Class
