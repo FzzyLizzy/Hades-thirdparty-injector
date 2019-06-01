@@ -5,7 +5,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/DeadlyKltten/Hades-thirdparty-injector.svg)](https://github.com/DeadlyKltten/Hades-thirdparty-injector/issues)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/DeadlyKltten/Hades-thirdparty-injector.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FDeadlyKltten%2FHades-thirdparty-injector)
 # Hades thirdparty injector 
-[Download Injector](https://github.com/DeadlyKltten/Hades-thirdparty-injector/releases/download/2.3.2/Injector-V2.3.2.zip)
+[Download Injector](https://github.com/DeadlyKltten/Hades-thirdparty-injector/releases/download/2.4.0/Injector-V2.4.0.zip)
 
 ### Why Third Party
 I am not a Dev of Hades myself, but I like to make programs
