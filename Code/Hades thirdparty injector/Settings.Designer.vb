@@ -26,15 +26,16 @@ Partial Class Settings
         Me.Auto_inject = New System.Windows.Forms.CheckBox()
         Me.On_Steam = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Close_after = New System.Windows.Forms.CheckBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Hades_ins_txt = New System.Windows.Forms.Label()
         Me.injector_version_txt = New System.Windows.Forms.Label()
         Me.GTA_location_txt = New System.Windows.Forms.Label()
         Me.Hades_location_txt = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Close_after = New System.Windows.Forms.CheckBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Login_TXT = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -81,17 +82,30 @@ Partial Class Settings
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Injector Settings"
         '
+        'Close_after
+        '
+        Me.Close_after.AutoSize = True
+        Me.Close_after.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Close_after.ForeColor = System.Drawing.Color.White
+        Me.Close_after.Location = New System.Drawing.Point(6, 71)
+        Me.Close_after.Name = "Close_after"
+        Me.Close_after.Size = New System.Drawing.Size(143, 20)
+        Me.Close_after.TabIndex = 8
+        Me.Close_after.Text = "Close after injection"
+        Me.Close_after.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.Login_TXT)
         Me.GroupBox2.Controls.Add(Me.Hades_ins_txt)
         Me.GroupBox2.Controls.Add(Me.injector_version_txt)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(12, 118)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(532, 85)
+        Me.GroupBox2.Size = New System.Drawing.Size(532, 110)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Information"
@@ -152,24 +166,12 @@ Partial Class Settings
         Me.GroupBox3.Controls.Add(Me.Hades_location_txt)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 209)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 234)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(532, 78)
         Me.GroupBox3.TabIndex = 10
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Locations"
-        '
-        'Close_after
-        '
-        Me.Close_after.AutoSize = True
-        Me.Close_after.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Close_after.ForeColor = System.Drawing.Color.White
-        Me.Close_after.Location = New System.Drawing.Point(6, 71)
-        Me.Close_after.Name = "Close_after"
-        Me.Close_after.Size = New System.Drawing.Size(143, 20)
-        Me.Close_after.TabIndex = 8
-        Me.Close_after.Text = "Close after injection"
-        Me.Close_after.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
@@ -179,9 +181,9 @@ Partial Class Settings
         Me.GroupBox4.Controls.Add(Me.TextBox1)
         Me.GroupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 294)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 318)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(532, 92)
+        Me.GroupBox4.Size = New System.Drawing.Size(532, 87)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Changelog"
@@ -200,16 +202,28 @@ Partial Class Settings
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(526, 77)
+        Me.TextBox1.Size = New System.Drawing.Size(526, 72)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = "Auto update to the latest version" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Auto inject" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Drag en drop the dll" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Updated UI"
+        '
+        'Login_TXT
+        '
+        Me.Login_TXT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Login_TXT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Login_TXT.Location = New System.Drawing.Point(3, 74)
+        Me.Login_TXT.Name = "Login_TXT"
+        Me.Login_TXT.Size = New System.Drawing.Size(520, 29)
+        Me.Login_TXT.TabIndex = 3
+        Me.Login_TXT.Text = "Logged in as:"
+        Me.Login_TXT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(556, 398)
+        Me.ClientSize = New System.Drawing.Size(556, 417)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -241,4 +255,5 @@ Partial Class Settings
     Friend WithEvents Close_after As CheckBox
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Login_TXT As Label
 End Class

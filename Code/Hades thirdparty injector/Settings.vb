@@ -8,6 +8,7 @@ Public Class Settings
         injector_version_txt.Text = "Injector version: " + JVersion
         GTA_location()
         hades_installed()
+        get_username()
     End Sub
     Private Sub Settings_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.Save()
@@ -68,4 +69,15 @@ Public Class Settings
             My.Settings.Close_After = False
         End If
     End Sub
+    Public Sub get_username()
+        Dim LocalAppData As String = Environment.ExpandEnvironmentVariables("%AppData% \Hades")
+        If System.IO.File.Exists(LocalAppData + "\Hades CFG.ini") Then
+            Dim Counter As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(1)
+            Counter = Counter.Remove(0, 9)
+            Login_TXT.Text = "Logged in as: " + Counter
+        Else
+            Login_TXT.Text = "Logged in as: None"
+        End If
+    End Sub
+
 End Class
