@@ -39,6 +39,6 @@ if the core is not in the bin folder or the bin folder does not exist at all the
 * hades.dll is in the bin folder
 
 if the dll is not in the bin folder, the Injector cannot do anything
-an easy way to see if the dll is installed in the settings
+an easy way to see if the dll is installed is in the settings tab
 
 ![dll](https://i.imgur.com/V9qASiU.png)
