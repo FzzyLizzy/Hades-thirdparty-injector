@@ -28,3 +28,17 @@ If you have GTAV from steam check this box
 * Press Start GTAV
 
 ![Auto Inject](https://i.imgur.com/7FRh4id.png)
+
+### injector is not working? check this first
+* the core is still in the bin folder
+
+if the core is not in the bin folder or the bin folder does not exist at all then you will get this error
+
+![Missing_Core](https://i.imgur.com/wFFFIBC.png)
+
+* is in the bin folder
+
+if the dll is not in the bin folder, the Injector cannot do anything
+an easy way to see if the dll is installed in the settings
+
+![dll](https://i.imgur.com/V9qASiU.png)
