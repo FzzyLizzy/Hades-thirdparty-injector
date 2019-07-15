@@ -6,6 +6,7 @@ Public Class Settings
         On_Steam.Checked = My.Settings.Steam
         Close_after.Checked = My.Settings.Close_After
         injector_version_txt.Text = "Injector version: " + JVersion
+        Label1.Text = "Menu version: " + Menu_Bin
         GTA_location()
         hades_installed()
         get_username()

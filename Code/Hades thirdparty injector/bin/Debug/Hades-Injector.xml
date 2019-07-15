@@ -27,6 +27,11 @@ Hades-Injector
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Hades.My.Resources.Resources.Bunifu_UI_v1_52">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
 <member name="P:Hades.My.Resources.Resources.Inject">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -5,15 +5,20 @@ Imports System.Net.WebClient.DownloadFile
 Imports System.Runtime
 Public Class Main
     Dim Auto_inject_count As String
+    Dim newestMenu As String
     Dim p() As Process
     'TODO: Download menu dll from this program (only if loging in to forum is a opsion)
     'TODO: display cuttent en new version in program
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UpdateJ.Visible = False
+        UpdateM.Visible = False
         Try
             CheckForUpdates()
         Catch ex As Exception
         End Try
+        loadLog()
         Core_check()
+        Check_MenuU()
     End Sub
     Public Sub CheckForUpdates()
         Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Release/Version.bin")
@@ -22,7 +27,7 @@ Public Class Main
         Dim newestversion As String = sr.ReadToEnd()
         If newestversion = JVersion Then
         Else
-            Update_Button.Visible = True
+            UpdateJ.Visible = True
         End If
     End Sub
     Public Sub Start_GTAV()
@@ -68,18 +73,6 @@ Grand Theft Auto V Not found")
             Process.Start("https://hadesgta.com/forum/index.php?forums/15/")
         End If
     End Sub
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles Inject_button.Click
-        Inject()
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles StartGTAV_Button.Click
-        Start_GTAV()
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles Website_Button.Click
-        Process.Start("https://hadesgta.com/forum/index.php")
-    End Sub
-
     Private Sub Auto_inject_Timer_Tick(sender As Object, e As EventArgs) Handles Auto_inject_Timer.Tick
         p = Process.GetProcessesByName("GTA5")
         If p.Count > 0 Then
@@ -112,29 +105,8 @@ Grand Theft Auto V Not found")
         End If
     End Sub
 
-    Private Sub settings_button_Click(sender As Object, e As EventArgs) Handles settings_button.Click
-        Dim SecondForm As New Settings
-        My.Settings.Save()
-        SecondForm.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub Main_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         End
-    End Sub
-
-    Private Sub Update_Button_Click(sender As Object, e As EventArgs) Handles Update_Button.Click
-        Dim remoteUri As String = "https://github.com/DeadlyKltten/Hades-thirdparty-injector/raw/master/Release/Hades-Injector.exe"
-        Dim fileName As String = "Hades-Injector.Update"
-        Using client As New WebClient()
-            client.DownloadFile(remoteUri, fileName)
-        End Using
-        If System.IO.File.Exists("Hades-Injector.Update") Then
-            Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe")
-            End
-            Else
-            check_updateFile()
-        End If
     End Sub
     Public Sub check_updateFile()
         If System.IO.File.Exists("Hades-Injector.Update") Then
@@ -152,18 +124,18 @@ Grand Theft Auto V Not found")
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
-    Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Hades_logo.MouseDown
+    Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
         drag = True
         mousex = Windows.Forms.Cursor.Position.X - Me.Left
         mousey = Windows.Forms.Cursor.Position.Y - Me.Top
     End Sub
-    Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Hades_logo.MouseMove
+    Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
         If drag Then
             Me.Top = Windows.Forms.Cursor.Position.Y - mousey
             Me.Left = Windows.Forms.Cursor.Position.X - mousex
         End If
     End Sub
-    Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Hades_logo.MouseUp
+    Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
         drag = False
     End Sub
     Public Sub Core_check()
@@ -171,5 +143,76 @@ Grand Theft Auto V Not found")
             Core_Error.Visible = True
             Core_Error.Text = "WARNING core not found Injector will not work"
         End If
+    End Sub
+
+    Private Sub Update_Click(sender As Object, e As EventArgs) Handles UpdateJ.Click
+        Dim remoteUri As String = "https://github.com/DeadlyKltten/Hades-thirdparty-injector/raw/master/Release/Hades-Injector.exe"
+        Dim fileName As String = "Hades-Injector.Update"
+        Using client As New WebClient()
+            client.DownloadFile(remoteUri, fileName)
+        End Using
+        If System.IO.File.Exists("Hades-Injector.Update") Then
+            Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe")
+            End
+        Else
+            check_updateFile()
+        End If
+    End Sub
+
+    Private Sub Website_Click(sender As Object, e As EventArgs) Handles Website.Click
+        Process.Start("https://hadesgta.com/forum/index.php")
+    End Sub
+
+    Private Sub Settings_Click(sender As Object, e As EventArgs) Handles settings.Click
+        Dim SecondForm As New Settings
+        My.Settings.Save()
+        SecondForm.Show()
+        Me.Hide()
+    End Sub
+    Private Sub Inject_B_Click(sender As Object, e As EventArgs) Handles Inject_B.Click
+        Inject()
+    End Sub
+
+    Private Sub StartGTAV_Click(sender As Object, e As EventArgs) Handles StartGTAV.Click
+        Start_GTAV()
+    End Sub
+    Public Sub loadLog()
+        Dim inStream As StreamReader
+        Dim webRequest As WebRequest
+        Dim webresponse As WebResponse
+        webRequest = WebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/log.bin")
+        webresponse = webRequest.GetResponse()
+        inStream = New StreamReader(webresponse.GetResponseStream())
+        RichTextBox1.Text = inStream.ReadToEnd()
+    End Sub
+    Public Sub Check_MenuU()
+        If Not System.IO.File.Exists("bin\Menu.bin") Then
+            My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin", "bin\Menu.bin")
+        Else
+            Menu_Bin = My.Computer.FileSystem.ReadAllText("bin\Menu.bin")
+            Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin")
+            Dim response As System.Net.HttpWebResponse = request.GetResponse()
+            Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
+            newestMenu = sr.ReadToEnd()
+            If newestMenu = Menu_Bin Then
+                If Not System.IO.File.Exists("bin\Hades.dll") Then
+                    My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Hades.dll", "bin\Hades.dll")
+                End If
+            Else
+                UpdateM.Visible = True
+            End If
+        End If
+    End Sub
+    Public Sub Update_Menu()
+        My.Computer.FileSystem.DeleteFile("bin\Menu.bin")
+        My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin", "bin\Menu.bin")
+        My.Computer.FileSystem.DeleteFile("bin\Hades.dll")
+        My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Hades.dll", "bin\Hades.dll")
+        UpdateM.Visible = False
+        MessageBox.Show("Updated to " + newestMenu)
+    End Sub
+
+    Private Sub UpdateM_Click(sender As Object, e As EventArgs) Handles UpdateM.Click
+        Update_Menu()
     End Sub
 End Class
