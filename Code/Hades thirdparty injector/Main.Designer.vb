@@ -274,6 +274,7 @@ Partial Class Main
         Me.RichTextBox1.ForeColor = System.Drawing.Color.White
         Me.RichTextBox1.Location = New System.Drawing.Point(410, 44)
         Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(382, 276)
         Me.RichTextBox1.TabIndex = 20
         Me.RichTextBox1.Text = ""
