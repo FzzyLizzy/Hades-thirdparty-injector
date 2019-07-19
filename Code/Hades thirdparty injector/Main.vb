@@ -153,7 +153,7 @@ Grand Theft Auto V Not found")
             client.DownloadFile(remoteUri, fileName)
         End Using
         If System.IO.File.Exists("Hades-Injector.Update") Then
-            Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe")
+            Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe && start Hades-Injector.exe")
             End
         Else
             check_updateFile()

@@ -26,3 +26,5 @@ D:\Documenten\GitHub\Hades-thirdparty-injector\Code\Hades thirdparty injector\ob
 D:\Documenten\GitHub\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades-Injector.pdb
 D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\bin\Debug\Bunifu_UI_v1.52.dll
 D:\Github\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades thirdparty injector.vbproj.CopyComplete
+D:\Documenten\GitHub\Hades-thirdparty-injector\Code\Hades thirdparty injector\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Documenten\GitHub\Hades-thirdparty-injector\Code\Hades thirdparty injector\obj\Debug\Hades thirdparty injector.vbproj.CopyComplete
