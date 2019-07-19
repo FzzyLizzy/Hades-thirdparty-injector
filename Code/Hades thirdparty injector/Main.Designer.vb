@@ -88,7 +88,7 @@ Partial Class Main
         Me.UpdateJ.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.UpdateJ.OnHoverTextColor = System.Drawing.Color.White
         Me.UpdateJ.selected = False
-        Me.UpdateJ.Size = New System.Drawing.Size(193, 48)
+        Me.UpdateJ.Size = New System.Drawing.Size(392, 48)
         Me.UpdateJ.TabIndex = 12
         Me.UpdateJ.Text = "Update Injector"
         Me.UpdateJ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -252,13 +252,13 @@ Partial Class Main
         Me.UpdateM.IconVisible = True
         Me.UpdateM.IconZoom = 90.0R
         Me.UpdateM.IsTab = False
-        Me.UpdateM.Location = New System.Drawing.Point(211, 165)
+        Me.UpdateM.Location = New System.Drawing.Point(12, 165)
         Me.UpdateM.Name = "UpdateM"
         Me.UpdateM.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.UpdateM.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.UpdateM.OnHoverTextColor = System.Drawing.Color.White
         Me.UpdateM.selected = False
-        Me.UpdateM.Size = New System.Drawing.Size(193, 48)
+        Me.UpdateM.Size = New System.Drawing.Size(392, 48)
         Me.UpdateM.TabIndex = 17
         Me.UpdateM.Text = "Update Menu"
         Me.UpdateM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -275,6 +275,7 @@ Partial Class Main
         Me.RichTextBox1.Location = New System.Drawing.Point(410, 44)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.RichTextBox1.Size = New System.Drawing.Size(382, 276)
         Me.RichTextBox1.TabIndex = 20
         Me.RichTextBox1.Text = ""
@@ -310,7 +311,6 @@ Partial Class Main
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(804, 339)
         Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.UpdateM)
         Me.Controls.Add(Me.StartGTAV)
         Me.Controls.Add(Me.Inject_B)
@@ -319,6 +319,7 @@ Partial Class Main
         Me.Controls.Add(Me.UpdateJ)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Core_Error)
+        Me.Controls.Add(Me.PictureBox1)
         Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

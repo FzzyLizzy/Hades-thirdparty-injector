@@ -14,11 +14,12 @@ Public Class Main
         UpdateM.Visible = False
         Try
             CheckForUpdates()
+            loadLog()
+            Core_check()
+            Check_MenuU()
         Catch ex As Exception
+            MessageBox.Show("The server is not responding. Try again later")
         End Try
-        loadLog()
-        Core_check()
-        Check_MenuU()
     End Sub
     Public Sub CheckForUpdates()
         Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Release/Version.bin")
@@ -187,7 +188,9 @@ Grand Theft Auto V Not found")
     End Sub
     Public Sub Check_MenuU()
         If Not System.IO.File.Exists("bin\Menu.bin") Then
-            My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin", "bin\Menu.bin")
+            My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Release/Version.bin", "bin\Menu.bin")
+            UpdateM.Text = "Install Menu"
+            UpdateM.Visible = True
         Else
             Menu_Bin = My.Computer.FileSystem.ReadAllText("bin\Menu.bin")
             Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin")
@@ -195,9 +198,7 @@ Grand Theft Auto V Not found")
             Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
             newestMenu = sr.ReadToEnd()
             If newestMenu = Menu_Bin Then
-                If Not System.IO.File.Exists("bin\Hades.dll") Then
-                    My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Hades.dll", "bin\Hades.dll")
-                End If
+
             Else
                 UpdateM.Visible = True
             End If
@@ -206,10 +207,14 @@ Grand Theft Auto V Not found")
     Public Sub Update_Menu()
         My.Computer.FileSystem.DeleteFile("bin\Menu.bin")
         My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin", "bin\Menu.bin")
-        My.Computer.FileSystem.DeleteFile("bin\Hades.dll")
+        If System.IO.File.Exists("bin\Hades.dll") Then
+            My.Computer.FileSystem.DeleteFile("bin\Hades.dll")
+        End If
         My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Hades.dll", "bin\Hades.dll")
         UpdateM.Visible = False
-        MessageBox.Show("Updated to " + newestMenu)
+        If Not newestMenu = "" Then
+            MessageBox.Show("Updated to " + newestMenu)
+        End If
     End Sub
 
     Private Sub UpdateM_Click(sender As Object, e As EventArgs) Handles UpdateM.Click
