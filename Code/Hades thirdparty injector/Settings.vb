@@ -28,20 +28,25 @@ Public Class Settings
         If My.Settings.Steam = True Then
             GTA_location_txt.Text = "GTA location: Steam library"
         Else
-            Dim uninstallNode As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\")
-            For Each subKeyName As String In uninstallNode.GetSubKeyNames
+            If My.Settings.Toggle_GTA = False Then
+                Dim uninstallNode As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\")
+                For Each subKeyName As String In uninstallNode.GetSubKeyNames
 
-                Dim subKey As Microsoft.Win32.RegistryKey = uninstallNode.OpenSubKey(subKeyName)
-                Dim displayName As String = subKey.GetValue("DisplayName")
-                Dim InstallLocation As String = subKey.GetValue("InstallLocation")
-                If Not displayName Is Nothing Then
+                    Dim subKey As Microsoft.Win32.RegistryKey = uninstallNode.OpenSubKey(subKeyName)
+                    Dim displayName As String = subKey.GetValue("DisplayName")
+                    Dim InstallLocation As String = subKey.GetValue("InstallLocation")
+                    If Not displayName Is Nothing Then
 
-                    If displayName.Contains("Grand Theft Auto V") Then
-                        GTA_location_txt.Text = "GTA location: " + InstallLocation
+                        If displayName.Contains("Grand Theft Auto V") Then
+                            GTA_location_txt.Text = "GTA location: " + InstallLocation
+                        End If
                     End If
-                End If
-            Next
+                Next
+            Else
+                GTA_location_txt.Text = "GTA location: " + My.Settings.Custom_GTA_Folder.Replace("\PlayGTAV.exe", "")
+            End If
         End If
+
     End Sub
     Public Sub hades_installed()
         If System.IO.File.Exists("bin\" + DllFIle) Then
@@ -81,4 +86,13 @@ Public Class Settings
         End If
     End Sub
 
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+        Dim filepath As New OpenFileDialog
+        filepath.Title = "Select playGTAV.exe"
+        filepath.Filter = "exe | PlayGTAV.exe"
+        If filepath.ShowDialog = Windows.Forms.DialogResult.OK Then
+            My.Settings.Toggle_GTA = "True"
+            My.Settings.Custom_GTA_Folder = filepath.FileName
+        End If
+    End Sub
 End Class

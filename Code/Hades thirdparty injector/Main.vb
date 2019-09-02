@@ -58,6 +58,13 @@ Public Class Main
                     MessageBox.Show("ERROR
 Grand Theft Auto V Not found")
                 End If
+            Else
+                If System.IO.File.Exists(My.Settings.Custom_GTA_Folder) Then
+                    Process.Start(My.Settings.Custom_GTA_Folder)
+                Else
+                    MessageBox.Show("ERROR
+Grand Theft Auto V Not found")
+                End If
             End If
         End If
     End Sub
