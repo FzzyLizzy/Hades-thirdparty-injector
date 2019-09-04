@@ -10,35 +10,39 @@
 ### Why Third Party
 I am not a Dev of Hades myself, but I like to make programs
 
-## Setup
+## Setup (V2.4 and lower)
 * First unpack the zip
 * Download the hades dll from the forum
 * Start the Hades-Injector.exe
 * Drag and Drop the dll file on the injector
+## Setup (V2.5 and higher)
+* First unpack the zip
+* Start the Hades-Injector.exe
+* click on install / update menu
+* check in the settings if everything is correct
+* you are ready to use the injector
 
 If you have GTAV from steam check this box
 ![Steam Users](https://i.imgur.com/e0WqFg1.png)
 
-## How to install the menu
+## How to install the menu (V2.4 and lower)
 ![Install](https://i.imgur.com/cSB1YYZ.gif)
+## How to install the menu (V2.5 and higher)
+click on install / update menu
 
 ## How to use auto inject
-* Start the hades.exe
+* Start the Hades-Injector.exe
 * Check the box auto inject
 * Press Start GTAV
-
 ![Auto Inject](https://i.imgur.com/7FRh4id.png)
 
 ### injector is not working? check this first
 * the core is still in the bin folder
-
 if the core is not in the bin folder or the bin folder does not exist at all then you will get this error
 
 ![Missing_Core](https://i.imgur.com/wFFFIBC.png)
 
 * hades.dll is in the bin folder
-
-if the dll is not in the bin folder, the Injector cannot do anything
-an easy way to see if the dll is installed is in the settings tab
+if the dll is not in the bin folder, the Injector cannot do anything an easy way to see if the dll is installed is in the settings tab
 
 ![dll](https://i.imgur.com/V9qASiU.png)
