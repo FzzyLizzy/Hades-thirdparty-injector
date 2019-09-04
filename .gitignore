@@ -2,7 +2,3 @@
 .DS_Store
 .DS_Store?
 .Spotlight-V100
-.Trashes
-# Visual Studio 2015/2017 cache/options directory
-.vs/
-Code/Hades thirdparty injector/bin/Debug/Bin/Hades.dll
