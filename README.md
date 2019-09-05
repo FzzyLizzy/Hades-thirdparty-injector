@@ -15,6 +15,7 @@ I am not a Dev of Hades myself, but I like to make programs
 * Download the hades dll from the forum
 * Start the Hades-Injector.exe
 * Drag and Drop the dll file on the injector
+
 ## Setup (V2.5 and higher)
 * First unpack the zip
 * Start the Hades-Injector.exe
@@ -27,6 +28,7 @@ If you have GTAV from steam check this box
 
 ## How to install the menu (V2.4 and lower)
 ![Install](https://i.imgur.com/cSB1YYZ.gif)
+
 ## How to install the menu (V2.5 and higher)
 click on install / update menu
 
