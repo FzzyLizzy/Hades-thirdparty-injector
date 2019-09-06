@@ -38,7 +38,7 @@ click on install / update menu
 * Press Start GTAV
 ![Auto Inject](https://i.imgur.com/kyIAjG5.png)
 
-### injector is not working? check this first
+### injector is not working? check this first (V2.5 and lower)
 * the core is still in the bin folder
 if the core is not in the bin folder or the bin folder does not exist at all then you will get this error
 
@@ -48,3 +48,6 @@ if the core is not in the bin folder or the bin folder does not exist at all the
 if the dll is not in the bin folder, the Injector cannot do anything an easy way to see if the dll is installed is in the settings tab
 
 ![dll](https://i.imgur.com/ToK8sxy.png)
+
+### injector is not working? check this first (V2.6 and higher)
+not yet released
