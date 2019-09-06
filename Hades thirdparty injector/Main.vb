@@ -14,6 +14,7 @@ Public Class Main
         UpdateM.Visible = False
         Try
             CheckForUpdates()
+            Setup()
             loadLog()
             Core_check()
             Check_MenuU()
@@ -69,9 +70,9 @@ Grand Theft Auto V Not found")
         End If
     End Sub
     Public Sub Inject()
-        If System.IO.File.Exists("bin\" + DllFIle) Then
-            If System.IO.File.Exists("bin\core.exe") Then
-                Process.Start("bin\core.exe", "--process-name GTA5.exe --inject " + DllFIle)
+        If System.IO.File.Exists(BinFolder + "\" + DllFIle) Then
+            If System.IO.File.Exists(BinFolder + "\core.exe") Then
+                Process.Start(BinFolder + "\core.exe", "--process-name GTA5.exe --inject " + DllFIle)
                 If My.Settings.Close_After = True Then
                     End
                 End If
@@ -105,10 +106,10 @@ Grand Theft Auto V Not found")
         Dim p As String = e.Data.GetData(DataFormats.FileDrop)(0)
         Dim extension As String = Path.GetExtension(p)
         If extension = ".dll" Then
-            If System.IO.File.Exists(strPath + "\bin\" + DllFIle) Then
-                My.Computer.FileSystem.DeleteFile(strPath + "\bin\" + DllFIle)
+            If System.IO.File.Exists(BinFolder + "\" + DllFIle) Then
+                My.Computer.FileSystem.DeleteFile(strPath + "\" + DllFIle)
             End If
-            My.Computer.FileSystem.MoveFile(p, strPath + "\bin\" + DllFIle)
+            My.Computer.FileSystem.MoveFile(p, BinFolder + "\" + DllFIle)
             MessageBox.Show("Menu successfully installed")
         End If
     End Sub
@@ -118,7 +119,7 @@ Grand Theft Auto V Not found")
     End Sub
     Public Sub check_updateFile()
         If System.IO.File.Exists("Hades-Injector.Update") Then
-            Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe")
+            Process.Start("cmd", "/c move Hades-Injector.Update Hades-Injector.exe && start Hades-Injector.exe")
             End
         Else
             check_updateFile()
@@ -147,9 +148,8 @@ Grand Theft Auto V Not found")
         drag = False
     End Sub
     Public Sub Core_check()
-        If Not System.IO.File.Exists("bin\core.exe") Then
-            Core_Error.Visible = True
-            Core_Error.Text = "WARNING core not found Injector will not work"
+        If Not System.IO.File.Exists(BinFolder + "\core.exe") Then
+            Download_core()
         End If
     End Sub
 
@@ -194,12 +194,12 @@ Grand Theft Auto V Not found")
         RichTextBox1.Text = inStream.ReadToEnd()
     End Sub
     Public Sub Check_MenuU()
-        If Not System.IO.File.Exists("bin\Menu.bin") Then
-            My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Release/Version.bin", "bin\Menu.bin")
+        If Not System.IO.File.Exists(BinFolder + "\Menu.bin") Then
+            My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/0.bin", BinFolder + "\Menu.bin")
             UpdateM.Text = "Install Menu"
             UpdateM.Visible = True
         Else
-            Menu_Bin = My.Computer.FileSystem.ReadAllText("bin\Menu.bin")
+            Menu_Bin = My.Computer.FileSystem.ReadAllText(BinFolder + "\Menu.bin")
             Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin")
             Dim response As System.Net.HttpWebResponse = request.GetResponse()
             Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
@@ -212,18 +212,31 @@ Grand Theft Auto V Not found")
         End If
     End Sub
     Public Sub Update_Menu()
-        My.Computer.FileSystem.DeleteFile("bin\Menu.bin")
-        My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin", "bin\Menu.bin")
-        If System.IO.File.Exists("bin\Hades.dll") Then
-            My.Computer.FileSystem.DeleteFile("bin\Hades.dll")
+        My.Computer.FileSystem.DeleteFile(BinFolder + "\Menu.bin")
+        My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Version.bin", BinFolder + "\Menu.bin")
+        If System.IO.File.Exists(BinFolder + "\Hades.dll") Then
+            My.Computer.FileSystem.DeleteFile(BinFolder + "\Hades.dll")
         End If
-        My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Hades.dll", "bin\Hades.dll")
+        My.Computer.Network.DownloadFile("https://raw.githubusercontent.com/DeadlyKltten/Hades-thirdparty-injector/master/Menu/Hades.dll", BinFolder + "\Hades.dll")
         UpdateM.Visible = False
         If Not newestMenu = "" Then
             MessageBox.Show("Updated to " + newestMenu)
         End If
     End Sub
 
+    Public Sub Setup()
+        If System.IO.Directory.Exists(BinFolder) Then
+        Else
+            System.IO.Directory.CreateDirectory(BinFolder)
+        End If
+    End Sub
+    Public Sub Download_core()
+        Dim remoteUri As String = "https://github.com/DeadlyKltten/Hades-thirdparty-injector/raw/master/Release/core.exe"
+        Dim fileName As String = BinFolder + "\core.exe"
+        Using client As New WebClient()
+            client.DownloadFile(remoteUri, fileName)
+        End Using
+    End Sub
     Private Sub UpdateM_Click(sender As Object, e As EventArgs) Handles UpdateM.Click
         Update_Menu()
     End Sub

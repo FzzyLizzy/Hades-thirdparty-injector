@@ -2,6 +2,9 @@
 
 Public Class Settings
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If System.IO.File.Exists(BinFolder + "\Menu.bin") Then
+            Menu_Bin = My.Computer.FileSystem.ReadAllText(BinFolder + "\Menu.bin")
+        End If
         Auto_inject.Checked = My.Settings.Auto_inject
         On_Steam.Checked = My.Settings.Steam
         Close_after.Checked = My.Settings.Close_After
@@ -49,12 +52,10 @@ Public Class Settings
 
     End Sub
     Public Sub hades_installed()
-        If System.IO.File.Exists("bin\" + DllFIle) Then
+        If System.IO.File.Exists(BinFolder + "\" + DllFIle) Then
             Hades_ins_txt.Text = "Hades installed: Yes"
-            Hades_location_txt.Text = "Hades location: " + strPath + "\bin\" + DllFIle
         Else
             Hades_ins_txt.Text = "Hades installed: No"
-            Hades_location_txt.Text = "Hades location: "
         End If
     End Sub
 
@@ -76,7 +77,6 @@ Public Class Settings
         End If
     End Sub
     Public Sub get_username()
-        Dim LocalAppData As String = Environment.ExpandEnvironmentVariables("%AppData% \Hades")
         If System.IO.File.Exists(LocalAppData + "\Hades CFG.ini") Then
             Dim Counter As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(1)
             Counter = Counter.Remove(0, 9)
