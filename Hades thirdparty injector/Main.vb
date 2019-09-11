@@ -229,6 +229,9 @@ Grand Theft Auto V Not found")
         Else
             System.IO.Directory.CreateDirectory(BinFolder)
         End If
+        If My.Settings.Big_Form = True Then
+            Me.Size = New Size(1653, 460)
+        End If
     End Sub
     Public Sub Download_core()
         Dim remoteUri As String = "https://github.com/DeadlyKltten/Hades-thirdparty-injector/raw/master/Release/core.exe"
@@ -239,5 +242,19 @@ Grand Theft Auto V Not found")
     End Sub
     Private Sub UpdateM_Click(sender As Object, e As EventArgs) Handles UpdateM.Click
         Update_Menu()
+    End Sub
+    Dim bigForm As Boolean
+    Public Sub switchsize() Handles MyBase.DoubleClick
+        bigForm = My.Settings.Big_Form
+        If bigForm = False Then
+            bigForm = True
+            My.Settings.Big_Form = True
+            Me.Size = New Size(1653, 460)
+        Else
+            bigForm = False
+            My.Settings.Big_Form = False
+            Me.Size = New Size(804, 339)
+        End If
+        My.Settings.Save()
     End Sub
 End Class
