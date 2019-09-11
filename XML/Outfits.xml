@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Outfits>
- <Outfit> 
-	 <name>Casual</name>
-	 <Image>Casual.png</Image>
-	 <File>Casual.ini</File>
-	 <Gender>Female</Gender>
- </Outfit>
-</Outfits>
