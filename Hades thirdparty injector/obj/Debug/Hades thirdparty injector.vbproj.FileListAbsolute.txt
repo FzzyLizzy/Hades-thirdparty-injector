@@ -43,3 +43,4 @@ D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\bin\Debug\Hades-In
 D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\bin\Debug\Hades-Injector.xml
 D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\bin\Debug\Bunifu_UI_v1.52.dll
 D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades thirdparty injector.vbproj.CopyComplete
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.Login.resources

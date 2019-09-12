@@ -137,6 +137,18 @@ Namespace My
                 Me("Big_Form") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property Beta() As Boolean
+            Get
+                Return CType(Me("Beta"),Boolean)
+            End Get
+            Set
+                Me("Beta") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

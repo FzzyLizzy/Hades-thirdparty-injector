@@ -232,6 +232,9 @@ Grand Theft Auto V Not found")
         If My.Settings.Big_Form = True Then
             Me.Size = New Size(1653, 460)
         End If
+        If My.Settings.Beta = True Then
+            BetaLoader()
+        End If
     End Sub
     Public Sub Download_core()
         Dim remoteUri As String = "https://github.com/DeadlyKltten/Hades-thirdparty-injector/raw/master/Release/core.exe"
@@ -256,5 +259,8 @@ Grand Theft Auto V Not found")
             Me.Size = New Size(804, 339)
         End If
         My.Settings.Save()
+    End Sub
+    Public Sub BetaLoader()
+
     End Sub
 End Class

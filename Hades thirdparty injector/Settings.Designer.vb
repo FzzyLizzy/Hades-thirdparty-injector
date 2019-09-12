@@ -26,7 +26,9 @@ Partial Class Settings
         Me.Auto_inject = New System.Windows.Forms.CheckBox()
         Me.On_Steam = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Beta_switch = New System.Windows.Forms.CheckBox()
         Me.Close_after = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Login_TXT = New System.Windows.Forms.Label()
@@ -37,6 +39,7 @@ Partial Class Settings
         Me.BunifuFlatButton1 = New ns1.BunifuFlatButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.BunifuFlatButton2 = New ns1.BunifuFlatButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -72,16 +75,30 @@ Partial Class Settings
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.Black
+        Me.GroupBox1.Controls.Add(Me.Beta_switch)
         Me.GroupBox1.Controls.Add(Me.Close_after)
         Me.GroupBox1.Controls.Add(Me.On_Steam)
         Me.GroupBox1.Controls.Add(Me.Auto_inject)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(532, 100)
+        Me.GroupBox1.Size = New System.Drawing.Size(532, 129)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Injector Settings"
+        '
+        'Beta_switch
+        '
+        Me.Beta_switch.AutoSize = True
+        Me.Beta_switch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Beta_switch.ForeColor = System.Drawing.Color.White
+        Me.Beta_switch.Location = New System.Drawing.Point(6, 97)
+        Me.Beta_switch.Name = "Beta_switch"
+        Me.Beta_switch.Size = New System.Drawing.Size(146, 20)
+        Me.Beta_switch.TabIndex = 9
+        Me.Beta_switch.Text = "Enable injector beta"
+        Me.Beta_switch.UseVisualStyleBackColor = True
         '
         'Close_after
         '
@@ -95,6 +112,17 @@ Partial Class Settings
         Me.Close_after.Text = "Close after injection"
         Me.Close_after.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(148, 98)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(109, 16)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Unstable version"
+        '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -105,7 +133,7 @@ Partial Class Settings
         Me.GroupBox2.Controls.Add(Me.injector_version_txt)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 118)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 147)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(532, 137)
         Me.GroupBox2.TabIndex = 9
@@ -176,13 +204,12 @@ Partial Class Settings
         '
         Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox3.Controls.Add(Me.BunifuFlatButton1)
         Me.GroupBox3.Controls.Add(Me.GTA_location_txt)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 261)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 287)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(532, 85)
+        Me.GroupBox3.Size = New System.Drawing.Size(532, 54)
         Me.GroupBox3.TabIndex = 10
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Locations"
@@ -190,10 +217,11 @@ Partial Class Settings
         'BunifuFlatButton1
         '
         Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.BunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton1.BorderRadius = 0
-        Me.BunifuFlatButton1.ButtonText = "Wrong path?"
+        Me.BunifuFlatButton1.ButtonText = "Wrong GTAV path?"
         Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
@@ -208,15 +236,15 @@ Partial Class Settings
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(6, 48)
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(12, 458)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
         Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton1.selected = False
-        Me.BunifuFlatButton1.Size = New System.Drawing.Size(118, 24)
+        Me.BunifuFlatButton1.Size = New System.Drawing.Size(149, 48)
         Me.BunifuFlatButton1.TabIndex = 15
-        Me.BunifuFlatButton1.Text = "Wrong path?"
+        Me.BunifuFlatButton1.Text = "Wrong GTAV path?"
         Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -229,9 +257,9 @@ Partial Class Settings
         Me.GroupBox4.Controls.Add(Me.TextBox1)
         Me.GroupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 352)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 344)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(532, 115)
+        Me.GroupBox4.Size = New System.Drawing.Size(532, 108)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Changelog"
@@ -245,28 +273,64 @@ Partial Class Settings
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(6, 11)
+        Me.TextBox1.Location = New System.Drawing.Point(6, 15)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(526, 100)
+        Me.TextBox1.Size = New System.Drawing.Size(520, 85)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = "button for wrong GTA V pad" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bug fixes"
+        '
+        'BunifuFlatButton2
+        '
+        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton2.BorderRadius = 0
+        Me.BunifuFlatButton2.ButtonText = "Relogin Hades"
+        Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton2.Iconimage = Nothing
+        Me.BunifuFlatButton2.Iconimage_right = Nothing
+        Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton2.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton2.IconMarginLeft = 0
+        Me.BunifuFlatButton2.IconMarginRight = 0
+        Me.BunifuFlatButton2.IconRightVisible = False
+        Me.BunifuFlatButton2.IconRightZoom = 0R
+        Me.BunifuFlatButton2.IconVisible = True
+        Me.BunifuFlatButton2.IconZoom = 90.0R
+        Me.BunifuFlatButton2.IsTab = False
+        Me.BunifuFlatButton2.Location = New System.Drawing.Point(395, 458)
+        Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
+        Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton2.selected = False
+        Me.BunifuFlatButton2.Size = New System.Drawing.Size(149, 48)
+        Me.BunifuFlatButton2.TabIndex = 16
+        Me.BunifuFlatButton2.Text = "Relogin Hades"
+        Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(556, 479)
+        Me.ClientSize = New System.Drawing.Size(556, 513)
+        Me.Controls.Add(Me.BunifuFlatButton2)
+        Me.Controls.Add(Me.BunifuFlatButton1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.Color.White
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(572, 437)
+        Me.MinimumSize = New System.Drawing.Size(572, 552)
         Me.Name = "Settings"
         Me.Text = "Settings & Info"
         Me.GroupBox1.ResumeLayout(False)
@@ -293,4 +357,7 @@ Partial Class Settings
     Friend WithEvents Login_TXT As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents BunifuFlatButton1 As ns1.BunifuFlatButton
+    Friend WithEvents Beta_switch As CheckBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents BunifuFlatButton2 As ns1.BunifuFlatButton
 End Class

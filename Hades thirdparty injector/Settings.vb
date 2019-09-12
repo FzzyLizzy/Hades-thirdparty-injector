@@ -8,7 +8,11 @@ Public Class Settings
         Auto_inject.Checked = My.Settings.Auto_inject
         On_Steam.Checked = My.Settings.Steam
         Close_after.Checked = My.Settings.Close_After
+        Beta_switch.Checked = My.Settings.Beta
         injector_version_txt.Text = "Injector version: " + JVersion
+        If My.Settings.Beta = True Then
+            injector_version_txt.Text = "Injector version: " + JVersion + "-Beta"
+        End If
         Label1.Text = "Menu version: " + Menu_Bin
         GTA_location()
         hades_installed()
@@ -94,5 +98,21 @@ Public Class Settings
             My.Settings.Toggle_GTA = "True"
             My.Settings.Custom_GTA_Folder = filepath.FileName
         End If
+    End Sub
+
+    Private Sub Beta_switch_CheckedChanged(sender As Object, e As EventArgs) Handles Beta_switch.CheckedChanged
+        If Beta_switch.Checked = True Then
+            My.Settings.Beta = True
+            injector_version_txt.Text = "Injector version: " + JVersion + "-Beta"
+        Else
+            My.Settings.Beta = False
+            injector_version_txt.Text = "Injector version: " + JVersion
+        End If
+    End Sub
+
+    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
+        Dim SecondForm As New Login
+        My.Settings.Save()
+        SecondForm.Show()
     End Sub
 End Class
