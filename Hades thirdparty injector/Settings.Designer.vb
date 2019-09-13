@@ -39,7 +39,7 @@ Partial Class Settings
         Me.BunifuFlatButton1 = New ns1.BunifuFlatButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.BunifuFlatButton2 = New ns1.BunifuFlatButton()
+        Me.ReLogin_button = New ns1.BunifuFlatButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -281,40 +281,40 @@ Partial Class Settings
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = "button for wrong GTA V pad" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bug fixes"
         '
-        'BunifuFlatButton2
+        'ReLogin_button
         '
-        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton2.BorderRadius = 0
-        Me.BunifuFlatButton2.ButtonText = "Relogin Hades"
-        Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton2.Iconimage = Nothing
-        Me.BunifuFlatButton2.Iconimage_right = Nothing
-        Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton2.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton2.IconMarginLeft = 0
-        Me.BunifuFlatButton2.IconMarginRight = 0
-        Me.BunifuFlatButton2.IconRightVisible = False
-        Me.BunifuFlatButton2.IconRightZoom = 0R
-        Me.BunifuFlatButton2.IconVisible = True
-        Me.BunifuFlatButton2.IconZoom = 90.0R
-        Me.BunifuFlatButton2.IsTab = False
-        Me.BunifuFlatButton2.Location = New System.Drawing.Point(395, 458)
-        Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
-        Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton2.selected = False
-        Me.BunifuFlatButton2.Size = New System.Drawing.Size(149, 48)
-        Me.BunifuFlatButton2.TabIndex = 16
-        Me.BunifuFlatButton2.Text = "Relogin Hades"
-        Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ReLogin_button.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.ReLogin_button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ReLogin_button.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.ReLogin_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ReLogin_button.BorderRadius = 0
+        Me.ReLogin_button.ButtonText = "Relogin Hades"
+        Me.ReLogin_button.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ReLogin_button.DisabledColor = System.Drawing.Color.Gray
+        Me.ReLogin_button.Iconcolor = System.Drawing.Color.Transparent
+        Me.ReLogin_button.Iconimage = Nothing
+        Me.ReLogin_button.Iconimage_right = Nothing
+        Me.ReLogin_button.Iconimage_right_Selected = Nothing
+        Me.ReLogin_button.Iconimage_Selected = Nothing
+        Me.ReLogin_button.IconMarginLeft = 0
+        Me.ReLogin_button.IconMarginRight = 0
+        Me.ReLogin_button.IconRightVisible = False
+        Me.ReLogin_button.IconRightZoom = 0R
+        Me.ReLogin_button.IconVisible = True
+        Me.ReLogin_button.IconZoom = 90.0R
+        Me.ReLogin_button.IsTab = False
+        Me.ReLogin_button.Location = New System.Drawing.Point(395, 458)
+        Me.ReLogin_button.Name = "ReLogin_button"
+        Me.ReLogin_button.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.ReLogin_button.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.ReLogin_button.OnHoverTextColor = System.Drawing.Color.White
+        Me.ReLogin_button.selected = False
+        Me.ReLogin_button.Size = New System.Drawing.Size(149, 48)
+        Me.ReLogin_button.TabIndex = 16
+        Me.ReLogin_button.Text = "Relogin Hades"
+        Me.ReLogin_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ReLogin_button.Textcolor = System.Drawing.Color.White
+        Me.ReLogin_button.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Settings
         '
@@ -322,7 +322,7 @@ Partial Class Settings
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(556, 513)
-        Me.Controls.Add(Me.BunifuFlatButton2)
+        Me.Controls.Add(Me.ReLogin_button)
         Me.Controls.Add(Me.BunifuFlatButton1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
@@ -359,5 +359,5 @@ Partial Class Settings
     Friend WithEvents BunifuFlatButton1 As ns1.BunifuFlatButton
     Friend WithEvents Beta_switch As CheckBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents BunifuFlatButton2 As ns1.BunifuFlatButton
+    Friend WithEvents ReLogin_button As ns1.BunifuFlatButton
 End Class

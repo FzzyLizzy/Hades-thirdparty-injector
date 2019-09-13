@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class Settings
-    Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If System.IO.File.Exists(BinFolder + "\Menu.bin") Then
             Menu_Bin = My.Computer.FileSystem.ReadAllText(BinFolder + "\Menu.bin")
         End If
@@ -84,7 +84,13 @@ Public Class Settings
         If System.IO.File.Exists(LocalAppData + "\Hades CFG.ini") Then
             Dim Counter As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(1)
             Counter = Counter.Remove(0, 9)
-            Login_TXT.Text = "Logged in as: " + Counter
+            If Not Counter = "" Then
+                Login_TXT.Text = "Logged in as: " + Counter
+            Else
+                Login_TXT.Text = "Logged in as: None"
+                ReLogin_button.Text = "Login Hades"
+            End If
+
         Else
             Login_TXT.Text = "Logged in as: None"
         End If
@@ -110,9 +116,10 @@ Public Class Settings
         End If
     End Sub
 
-    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
+    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles ReLogin_button.Click
         Dim SecondForm As New Login
         My.Settings.Save()
         SecondForm.Show()
+        Me.Hide()
     End Sub
 End Class

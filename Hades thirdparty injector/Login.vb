@@ -21,6 +21,7 @@
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Close()
+        Settings.Show()
     End Sub
 
     Private Sub UpdateM_Click(sender As Object, e As EventArgs) Handles UpdateM.Click
@@ -32,6 +33,7 @@
         Else
             MessageBox.Show("save login data failed")
         End If
+        Settings.Show()
         Me.Hide()
     End Sub
 
