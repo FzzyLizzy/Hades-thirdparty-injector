@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Hades thirdparty injector", "Hades thirdparty injector\Hades thirdparty injector.vbproj", "{7DF8F734-8F50-4031-B4E0-BCDD66178ACA}"
 EndProject
