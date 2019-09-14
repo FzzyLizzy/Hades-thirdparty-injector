@@ -36,12 +36,12 @@ Partial Class Settings
         Me.injector_version_txt = New System.Windows.Forms.Label()
         Me.GTA_location_txt = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Hades_site = New System.Windows.Forms.WebBrowser()
         Me.BunifuFlatButton1 = New ns1.BunifuFlatButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ReLogin_button = New ns1.BunifuFlatButton()
         Me.HWID_Button = New ns1.BunifuFlatButton()
-        Me.Hades_site = New System.Windows.Forms.WebBrowser()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -217,6 +217,16 @@ Partial Class Settings
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Locations"
         '
+        'Hades_site
+        '
+        Me.Hades_site.Location = New System.Drawing.Point(458, 14)
+        Me.Hades_site.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Hades_site.Name = "Hades_site"
+        Me.Hades_site.ScriptErrorsSuppressed = True
+        Me.Hades_site.Size = New System.Drawing.Size(68, 31)
+        Me.Hades_site.TabIndex = 11
+        Me.Hades_site.Visible = False
+        '
         'BunifuFlatButton1
         '
         Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
@@ -354,16 +364,6 @@ Partial Class Settings
         Me.HWID_Button.Textcolor = System.Drawing.Color.White
         Me.HWID_Button.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HWID_Button.Visible = False
-        '
-        'Hades_site
-        '
-        Me.Hades_site.Location = New System.Drawing.Point(479, 14)
-        Me.Hades_site.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.Hades_site.Name = "Hades_site"
-        Me.Hades_site.ScriptErrorsSuppressed = True
-        Me.Hades_site.Size = New System.Drawing.Size(47, 31)
-        Me.Hades_site.TabIndex = 11
-        Me.Hades_site.Visible = False
         '
         'Settings
         '
