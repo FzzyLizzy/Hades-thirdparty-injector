@@ -14,9 +14,14 @@ Public Class Settings
             injector_version_txt.Text = "Injector version: " + JVersion + "-Beta"
         End If
         Label1.Text = "Menu version: " + Menu_Bin
+        BetaLoader()
         GTA_location()
         hades_installed()
         get_username()
+    End Sub
+    Public Sub BetaLoader()
+        Dim V As Boolean = My.Settings.Beta
+        HWID_Button.Visible = V
     End Sub
     Private Sub Settings_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.Save()
@@ -114,6 +119,7 @@ Public Class Settings
             My.Settings.Beta = False
             injector_version_txt.Text = "Injector version: " + JVersion
         End If
+        BetaLoader()
     End Sub
 
     Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles ReLogin_button.Click
@@ -121,5 +127,25 @@ Public Class Settings
         My.Settings.Save()
         SecondForm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub BunifuFlatButton2_Click_1(sender As Object, e As EventArgs) Handles HWID_Button.Click
+        Hades_site.Navigate("https://hadesgta.com/forum/index.php?license/selfreset")
+    End Sub
+    Private Sub Hades_site_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles Hades_site.DocumentCompleted
+        If System.IO.File.Exists(LocalAppData + "\Hades CFG.ini") Then
+            Try
+                Dim Counter1 As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(1)
+                Dim Counter2 As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(2)
+                Counter1 = Counter1.Remove(0, 9)
+                Counter2 = Counter2.Remove(0, 9)
+                Hades_site.Document.GetElementById("login").SetAttribute("value", Counter1)
+                Hades_site.Document.GetElementById("password").SetAttribute("value", Counter2)
+                Hades_site.Document.GetElementById("remember").InvokeMember("click")
+                Hades_site.Document.GetElementById("password").Focus()
+                System.Windows.Forms.SendKeys.Send("{ENTER}")
+            Catch ex As Exception
+            End Try
+        End If
     End Sub
 End Class

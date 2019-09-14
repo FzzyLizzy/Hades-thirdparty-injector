@@ -40,6 +40,8 @@ Partial Class Settings
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ReLogin_button = New ns1.BunifuFlatButton()
+        Me.HWID_Button = New ns1.BunifuFlatButton()
+        Me.Hades_site = New System.Windows.Forms.WebBrowser()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -204,6 +206,7 @@ Partial Class Settings
         '
         Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox3.Controls.Add(Me.Hades_site)
         Me.GroupBox3.Controls.Add(Me.GTA_location_txt)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
@@ -279,7 +282,7 @@ Partial Class Settings
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(520, 85)
         Me.TextBox1.TabIndex = 0
-        Me.TextBox1.Text = "button for wrong GTA V pad" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bug fixes"
+        Me.TextBox1.Text = "small bug fix"
         '
         'ReLogin_button
         '
@@ -316,12 +319,59 @@ Partial Class Settings
         Me.ReLogin_button.Textcolor = System.Drawing.Color.White
         Me.ReLogin_button.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'HWID_Button
+        '
+        Me.HWID_Button.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.HWID_Button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.HWID_Button.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.HWID_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.HWID_Button.BorderRadius = 0
+        Me.HWID_Button.ButtonText = "License HWID Reset"
+        Me.HWID_Button.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HWID_Button.DisabledColor = System.Drawing.Color.Gray
+        Me.HWID_Button.Iconcolor = System.Drawing.Color.Transparent
+        Me.HWID_Button.Iconimage = Nothing
+        Me.HWID_Button.Iconimage_right = Nothing
+        Me.HWID_Button.Iconimage_right_Selected = Nothing
+        Me.HWID_Button.Iconimage_Selected = Nothing
+        Me.HWID_Button.IconMarginLeft = 0
+        Me.HWID_Button.IconMarginRight = 0
+        Me.HWID_Button.IconRightVisible = False
+        Me.HWID_Button.IconRightZoom = 0R
+        Me.HWID_Button.IconVisible = True
+        Me.HWID_Button.IconZoom = 90.0R
+        Me.HWID_Button.IsTab = False
+        Me.HWID_Button.Location = New System.Drawing.Point(167, 458)
+        Me.HWID_Button.Name = "HWID_Button"
+        Me.HWID_Button.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.HWID_Button.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.HWID_Button.OnHoverTextColor = System.Drawing.Color.White
+        Me.HWID_Button.selected = False
+        Me.HWID_Button.Size = New System.Drawing.Size(222, 48)
+        Me.HWID_Button.TabIndex = 17
+        Me.HWID_Button.Text = "License HWID Reset"
+        Me.HWID_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.HWID_Button.Textcolor = System.Drawing.Color.White
+        Me.HWID_Button.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HWID_Button.Visible = False
+        '
+        'Hades_site
+        '
+        Me.Hades_site.Location = New System.Drawing.Point(479, 14)
+        Me.Hades_site.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Hades_site.Name = "Hades_site"
+        Me.Hades_site.ScriptErrorsSuppressed = True
+        Me.Hades_site.Size = New System.Drawing.Size(47, 31)
+        Me.Hades_site.TabIndex = 11
+        Me.Hades_site.Visible = False
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(556, 513)
+        Me.Controls.Add(Me.HWID_Button)
         Me.Controls.Add(Me.ReLogin_button)
         Me.Controls.Add(Me.BunifuFlatButton1)
         Me.Controls.Add(Me.GroupBox4)
@@ -360,4 +410,6 @@ Partial Class Settings
     Friend WithEvents Beta_switch As CheckBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ReLogin_button As ns1.BunifuFlatButton
+    Friend WithEvents Hades_site As WebBrowser
+    Friend WithEvents HWID_Button As ns1.BunifuFlatButton
 End Class
