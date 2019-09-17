@@ -339,7 +339,6 @@ Partial Class Main
         Me.MinimizeBox = False
         Me.Name = "Main"
         Me.Text = "Hades menu"
-        Me.TransparencyKey = System.Drawing.Color.Black
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -219,11 +219,11 @@ Partial Class Settings
         '
         'Hades_site
         '
-        Me.Hades_site.Location = New System.Drawing.Point(458, 14)
+        Me.Hades_site.Location = New System.Drawing.Point(478, 14)
         Me.Hades_site.MinimumSize = New System.Drawing.Size(20, 20)
         Me.Hades_site.Name = "Hades_site"
         Me.Hades_site.ScriptErrorsSuppressed = True
-        Me.Hades_site.Size = New System.Drawing.Size(68, 31)
+        Me.Hades_site.Size = New System.Drawing.Size(48, 31)
         Me.Hades_site.TabIndex = 11
         Me.Hades_site.Visible = False
         '
@@ -292,7 +292,7 @@ Partial Class Settings
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(520, 85)
         Me.TextBox1.TabIndex = 0
-        Me.TextBox1.Text = "small bug fix"
+        Me.TextBox1.Text = "fix for Rockstar launcher"
         '
         'ReLogin_button
         '

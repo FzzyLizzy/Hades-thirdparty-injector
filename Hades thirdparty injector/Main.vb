@@ -49,12 +49,14 @@ Public Class Main
                     If Not displayName Is Nothing Then
 
                         If displayName.Contains("Grand Theft Auto V") Then
-                            My.Settings.GTA_Folder = InstallLocation
+                            InstallLocation = InstallLocation.Replace(",0", "").Replace("""", "")
+                            My.Settings.GTA_Folder = InstallLocation + "\PlayGTAV.exe"
+                            MessageBox.Show(My.Settings.GTA_Folder)
                         End If
                     End If
                 Next
-                If System.IO.File.Exists(My.Settings.GTA_Folder + "/PlayGTAV.exe") Then
-                    Process.Start(My.Settings.GTA_Folder + "/PlayGTAV.exe")
+                If System.IO.File.Exists(My.Settings.GTA_Folder) Then
+                    Process.Start(My.Settings.GTA_Folder)
                 Else
                     MessageBox.Show("ERROR
 Grand Theft Auto V Not found")
