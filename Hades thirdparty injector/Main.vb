@@ -51,7 +51,6 @@ Public Class Main
                         If displayName.Contains("Grand Theft Auto V") Then
                             InstallLocation = InstallLocation.Replace(",0", "").Replace("""", "")
                             My.Settings.GTA_Folder = InstallLocation + "\PlayGTAV.exe"
-                            MessageBox.Show(My.Settings.GTA_Folder)
                         End If
                     End If
                 Next
