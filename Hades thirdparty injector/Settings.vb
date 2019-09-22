@@ -50,6 +50,7 @@ Public Class Settings
                     If Not displayName Is Nothing Then
 
                         If displayName.Contains("Grand Theft Auto V") Then
+                            InstallLocation = InstallLocation.Replace(",0", "").Replace("""", "")
                             GTA_location_txt.Text = "GTA location: " + InstallLocation
                         End If
                     End If
