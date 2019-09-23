@@ -1,6 +1,24 @@
 ﻿Imports System.ComponentModel
 
 Public Class Settings
+    Dim Reset_Switch As Boolean = False
+    Dim drag As Boolean
+    Dim mousex As Integer
+    Dim mousey As Integer
+    Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles FlowLayoutPanel1.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles FlowLayoutPanel1.MouseMove
+        If drag Then
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+        End If
+    End Sub
+    Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles FlowLayoutPanel1.MouseUp
+        drag = False
+    End Sub
     Public Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If System.IO.File.Exists(BinFolder + "\Menu.bin") Then
             Menu_Bin = My.Computer.FileSystem.ReadAllText(BinFolder + "\Menu.bin")
@@ -21,13 +39,6 @@ Public Class Settings
     End Sub
     Public Sub BetaLoader()
         Dim V As Boolean = My.Settings.Beta
-        HWID_Button.Visible = V
-    End Sub
-    Private Sub Settings_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        My.Settings.Save()
-        Dim SecondForm As New Main
-        My.Settings.Save()
-        SecondForm.Show()
     End Sub
     Private Sub Auto_inject_CheckedChanged(sender As Object, e As EventArgs) Handles Auto_inject.CheckedChanged
         If Auto_inject.Checked = True Then
@@ -132,21 +143,33 @@ Public Class Settings
 
     Private Sub BunifuFlatButton2_Click_1(sender As Object, e As EventArgs) Handles HWID_Button.Click
         Hades_site.Navigate("https://hadesgta.com/forum/index.php?license/selfreset")
+        Reset_Switch = False
     End Sub
     Private Sub Hades_site_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles Hades_site.DocumentCompleted
-        If System.IO.File.Exists(LocalAppData + "\Hades CFG.ini") Then
-            Try
-                Dim Counter1 As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(1)
-                Dim Counter2 As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(2)
-                Counter1 = Counter1.Remove(0, 9)
-                Counter2 = Counter2.Remove(0, 9)
-                Hades_site.Document.GetElementById("login").SetAttribute("value", Counter1)
-                Hades_site.Document.GetElementById("password").SetAttribute("value", Counter2)
-                Hades_site.Document.GetElementById("remember").InvokeMember("click")
-                Hades_site.Document.GetElementById("password").Focus()
-                System.Windows.Forms.SendKeys.Send("{ENTER}")
-            Catch ex As Exception
-            End Try
+        If Reset_Switch = False Then
+            If System.IO.File.Exists(LocalAppData + "\Hades CFG.ini") Then
+                Reset_Switch = True
+                Try
+                    Dim Counter1 As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(1)
+                    Dim Counter2 As String = System.IO.File.ReadAllLines(LocalAppData + "\Hades CFG.ini")(2)
+                    Counter1 = Counter1.Remove(0, 9)
+                    Counter2 = Counter2.Remove(0, 9)
+                    Hades_site.Document.GetElementById("login").SetAttribute("value", Counter1)
+                    Hades_site.Document.GetElementById("password").SetAttribute("value", Counter2)
+                    Hades_site.Document.GetElementById("remember").InvokeMember("click")
+                    Hades_site.Document.GetElementById("password").Focus()
+                    System.Windows.Forms.SendKeys.Send("{ENTER}")
+                Catch ex As Exception
+                End Try
+            End If
         End If
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        My.Settings.Save()
+        Dim SecondForm As New Main
+        My.Settings.Save()
+        SecondForm.Show()
+        Me.Hide()
     End Sub
 End Class

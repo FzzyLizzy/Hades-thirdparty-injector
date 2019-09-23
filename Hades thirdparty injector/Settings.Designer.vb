@@ -30,22 +30,25 @@ Partial Class Settings
         Me.Close_after = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Hades_site = New System.Windows.Forms.WebBrowser()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Login_TXT = New System.Windows.Forms.Label()
         Me.Hades_ins_txt = New System.Windows.Forms.Label()
         Me.injector_version_txt = New System.Windows.Forms.Label()
         Me.GTA_location_txt = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Hades_site = New System.Windows.Forms.WebBrowser()
         Me.BunifuFlatButton1 = New ns1.BunifuFlatButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ReLogin_button = New ns1.BunifuFlatButton()
         Me.HWID_Button = New ns1.BunifuFlatButton()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Auto_inject
@@ -83,9 +86,9 @@ Partial Class Settings
         Me.GroupBox1.Controls.Add(Me.Auto_inject)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 32)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(532, 129)
+        Me.GroupBox1.Size = New System.Drawing.Size(564, 129)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Injector Settings"
@@ -129,18 +132,32 @@ Partial Class Settings
         '
         Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.Hades_site)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.Login_TXT)
         Me.GroupBox2.Controls.Add(Me.Hades_ins_txt)
         Me.GroupBox2.Controls.Add(Me.injector_version_txt)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 147)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 167)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(532, 137)
+        Me.GroupBox2.Size = New System.Drawing.Size(564, 137)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Information"
+        '
+        'Hades_site
+        '
+        Me.Hades_site.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Hades_site.Location = New System.Drawing.Point(111, 10)
+        Me.Hades_site.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.Hades_site.Name = "Hades_site"
+        Me.Hades_site.ScriptErrorsSuppressed = True
+        Me.Hades_site.Size = New System.Drawing.Size(447, 121)
+        Me.Hades_site.TabIndex = 11
+        Me.Hades_site.Visible = False
         '
         'Label1
         '
@@ -149,7 +166,7 @@ Partial Class Settings
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(520, 29)
+        Me.Label1.Size = New System.Drawing.Size(552, 29)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Menu version:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -161,7 +178,7 @@ Partial Class Settings
         Me.Login_TXT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Login_TXT.Location = New System.Drawing.Point(6, 103)
         Me.Login_TXT.Name = "Login_TXT"
-        Me.Login_TXT.Size = New System.Drawing.Size(520, 29)
+        Me.Login_TXT.Size = New System.Drawing.Size(552, 29)
         Me.Login_TXT.TabIndex = 3
         Me.Login_TXT.Text = "Logged in as:"
         Me.Login_TXT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -173,7 +190,7 @@ Partial Class Settings
         Me.Hades_ins_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Hades_ins_txt.Location = New System.Drawing.Point(6, 74)
         Me.Hades_ins_txt.Name = "Hades_ins_txt"
-        Me.Hades_ins_txt.Size = New System.Drawing.Size(520, 29)
+        Me.Hades_ins_txt.Size = New System.Drawing.Size(552, 29)
         Me.Hades_ins_txt.TabIndex = 2
         Me.Hades_ins_txt.Text = "Hades installed:"
         Me.Hades_ins_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -185,7 +202,7 @@ Partial Class Settings
         Me.injector_version_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.injector_version_txt.Location = New System.Drawing.Point(6, 16)
         Me.injector_version_txt.Name = "injector_version_txt"
-        Me.injector_version_txt.Size = New System.Drawing.Size(520, 29)
+        Me.injector_version_txt.Size = New System.Drawing.Size(552, 29)
         Me.injector_version_txt.TabIndex = 1
         Me.injector_version_txt.Text = "Injector version:"
         Me.injector_version_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -197,7 +214,7 @@ Partial Class Settings
         Me.GTA_location_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GTA_location_txt.Location = New System.Drawing.Point(6, 16)
         Me.GTA_location_txt.Name = "GTA_location_txt"
-        Me.GTA_location_txt.Size = New System.Drawing.Size(520, 29)
+        Me.GTA_location_txt.Size = New System.Drawing.Size(552, 29)
         Me.GTA_location_txt.TabIndex = 0
         Me.GTA_location_txt.Text = "GTA location:"
         Me.GTA_location_txt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -206,26 +223,15 @@ Partial Class Settings
         '
         Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox3.Controls.Add(Me.Hades_site)
         Me.GroupBox3.Controls.Add(Me.GTA_location_txt)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 287)
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 307)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(532, 54)
+        Me.GroupBox3.Size = New System.Drawing.Size(564, 54)
         Me.GroupBox3.TabIndex = 10
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Locations"
-        '
-        'Hades_site
-        '
-        Me.Hades_site.Location = New System.Drawing.Point(478, 14)
-        Me.Hades_site.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.Hades_site.Name = "Hades_site"
-        Me.Hades_site.ScriptErrorsSuppressed = True
-        Me.Hades_site.Size = New System.Drawing.Size(48, 31)
-        Me.Hades_site.TabIndex = 11
-        Me.Hades_site.Visible = False
         '
         'BunifuFlatButton1
         '
@@ -249,13 +255,13 @@ Partial Class Settings
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(12, 458)
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(8, 525)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
         Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton1.selected = False
-        Me.BunifuFlatButton1.Size = New System.Drawing.Size(149, 48)
+        Me.BunifuFlatButton1.Size = New System.Drawing.Size(181, 48)
         Me.BunifuFlatButton1.TabIndex = 15
         Me.BunifuFlatButton1.Text = "Wrong GTAV path?"
         Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -270,9 +276,9 @@ Partial Class Settings
         Me.GroupBox4.Controls.Add(Me.TextBox1)
         Me.GroupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 344)
+        Me.GroupBox4.Location = New System.Drawing.Point(3, 364)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(532, 108)
+        Me.GroupBox4.Size = New System.Drawing.Size(564, 153)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Changelog"
@@ -290,7 +296,7 @@ Partial Class Settings
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(520, 85)
+        Me.TextBox1.Size = New System.Drawing.Size(552, 130)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = "fix for Rockstar launcher"
         '
@@ -316,13 +322,13 @@ Partial Class Settings
         Me.ReLogin_button.IconVisible = True
         Me.ReLogin_button.IconZoom = 90.0R
         Me.ReLogin_button.IsTab = False
-        Me.ReLogin_button.Location = New System.Drawing.Point(395, 458)
+        Me.ReLogin_button.Location = New System.Drawing.Point(382, 525)
         Me.ReLogin_button.Name = "ReLogin_button"
         Me.ReLogin_button.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.ReLogin_button.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.ReLogin_button.OnHoverTextColor = System.Drawing.Color.White
         Me.ReLogin_button.selected = False
-        Me.ReLogin_button.Size = New System.Drawing.Size(149, 48)
+        Me.ReLogin_button.Size = New System.Drawing.Size(181, 48)
         Me.ReLogin_button.TabIndex = 16
         Me.ReLogin_button.Text = "Relogin Hades"
         Me.ReLogin_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -351,26 +357,49 @@ Partial Class Settings
         Me.HWID_Button.IconVisible = True
         Me.HWID_Button.IconZoom = 90.0R
         Me.HWID_Button.IsTab = False
-        Me.HWID_Button.Location = New System.Drawing.Point(167, 458)
+        Me.HWID_Button.Location = New System.Drawing.Point(195, 525)
         Me.HWID_Button.Name = "HWID_Button"
         Me.HWID_Button.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.HWID_Button.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.HWID_Button.OnHoverTextColor = System.Drawing.Color.White
         Me.HWID_Button.selected = False
-        Me.HWID_Button.Size = New System.Drawing.Size(222, 48)
+        Me.HWID_Button.Size = New System.Drawing.Size(181, 48)
         Me.HWID_Button.TabIndex = 17
         Me.HWID_Button.Text = "License HWID Reset"
         Me.HWID_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.HWID_Button.Textcolor = System.Drawing.Color.White
         Me.HWID_Button.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HWID_Button.Visible = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PictureBox2.BackgroundImage = Global.Hades.My.Resources.Resources.X
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Location = New System.Drawing.Point(542, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(32, 29)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 21
+        Me.PictureBox2.TabStop = False
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(572, 30)
+        Me.FlowLayoutPanel1.TabIndex = 20
         '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(556, 513)
+        Me.ClientSize = New System.Drawing.Size(572, 580)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.HWID_Button)
         Me.Controls.Add(Me.ReLogin_button)
         Me.Controls.Add(Me.BunifuFlatButton1)
@@ -379,6 +408,7 @@ Partial Class Settings
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(572, 552)
         Me.Name = "Settings"
@@ -389,6 +419,7 @@ Partial Class Settings
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -412,4 +443,6 @@ Partial Class Settings
     Friend WithEvents ReLogin_button As ns1.BunifuFlatButton
     Friend WithEvents Hades_site As WebBrowser
     Friend WithEvents HWID_Button As ns1.BunifuFlatButton
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class
