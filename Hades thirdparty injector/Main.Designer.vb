@@ -36,6 +36,7 @@ Partial Class Main
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -292,13 +293,13 @@ Partial Class Main
         'PictureBox2
         '
         Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackColor = System.Drawing.Color.Black
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PictureBox2.BackgroundImage = Global.Hades.My.Resources.Resources.X
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Location = New System.Drawing.Point(745, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(762, 1)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(47, 36)
+        Me.PictureBox2.Size = New System.Drawing.Size(47, 28)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox2.TabIndex = 10
         Me.PictureBox2.TabStop = False
@@ -315,6 +316,15 @@ Partial Class Main
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(804, 30)
+        Me.FlowLayoutPanel1.TabIndex = 21
+        '
         'Main
         '
         Me.AllowDrop = True
@@ -322,6 +332,8 @@ Partial Class Main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(804, 339)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.UpdateM)
         Me.Controls.Add(Me.StartGTAV)
@@ -329,7 +341,6 @@ Partial Class Main
         Me.Controls.Add(Me.settings)
         Me.Controls.Add(Me.Website)
         Me.Controls.Add(Me.UpdateJ)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Core_Error)
         Me.Controls.Add(Me.PictureBox1)
         Me.ForeColor = System.Drawing.Color.Black
@@ -356,4 +367,5 @@ Partial Class Main
     Friend WithEvents UpdateM As ns1.BunifuFlatButton
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class
