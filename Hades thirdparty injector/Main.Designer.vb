@@ -37,6 +37,7 @@ Partial Class Main
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CD_Button = New ns1.BunifuFlatButton()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -325,6 +326,42 @@ Partial Class Main
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '
+        'CD_Button
+        '
+        Me.CD_Button.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.CD_Button.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CD_Button.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.CD_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.CD_Button.BorderRadius = 0
+        Me.CD_Button.ButtonText = "Content downloader"
+        Me.CD_Button.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CD_Button.DisabledColor = System.Drawing.Color.Gray
+        Me.CD_Button.Iconcolor = System.Drawing.Color.Transparent
+        Me.CD_Button.Iconimage = Nothing
+        Me.CD_Button.Iconimage_right = Nothing
+        Me.CD_Button.Iconimage_right_Selected = Nothing
+        Me.CD_Button.Iconimage_Selected = Nothing
+        Me.CD_Button.IconMarginLeft = 0
+        Me.CD_Button.IconMarginRight = 0
+        Me.CD_Button.IconRightVisible = False
+        Me.CD_Button.IconRightZoom = 0R
+        Me.CD_Button.IconVisible = True
+        Me.CD_Button.IconZoom = 90.0R
+        Me.CD_Button.IsTab = False
+        Me.CD_Button.Location = New System.Drawing.Point(12, 219)
+        Me.CD_Button.Name = "CD_Button"
+        Me.CD_Button.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.CD_Button.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(129, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.CD_Button.OnHoverTextColor = System.Drawing.Color.White
+        Me.CD_Button.selected = False
+        Me.CD_Button.Size = New System.Drawing.Size(193, 48)
+        Me.CD_Button.TabIndex = 22
+        Me.CD_Button.Text = "Content downloader"
+        Me.CD_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CD_Button.Textcolor = System.Drawing.Color.White
+        Me.CD_Button.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CD_Button.Visible = False
+        '
         'Main
         '
         Me.AllowDrop = True
@@ -332,6 +369,7 @@ Partial Class Main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(804, 339)
+        Me.Controls.Add(Me.CD_Button)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.RichTextBox1)
@@ -368,4 +406,5 @@ Partial Class Main
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents CD_Button As ns1.BunifuFlatButton
 End Class

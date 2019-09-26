@@ -298,7 +298,7 @@ Partial Class Settings
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(552, 130)
         Me.TextBox1.TabIndex = 0
-        Me.TextBox1.Text = "fix for Rockstar launcher"
+        Me.TextBox1.Text = "splash screen finally works" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "==BETA==" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "start of Content downloader"
         '
         'ReLogin_button
         '

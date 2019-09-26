@@ -1,0 +1,18 @@
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\bin\Debug\Hades-Injector.exe.config
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\bin\Debug\Hades-Injector.exe
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\bin\Debug\Hades-Injector.pdb
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\bin\Debug\Hades-Injector.xml
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades injector.vbprojAssemblyReference.cache
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.Login.resources
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.Main.resources
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.Resources.resources
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.Settings.resources
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.Splash.resources
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades injector.vbproj.GenerateResource.cache
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades injector.vbproj.CoreCompileInputs.cache
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades injector.vbproj.CopyComplete
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades-Injector.exe
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades-Injector.xml
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades-Injector.pdb
+D:\Github\Hades-thirdparty-injector\Hades thirdparty injector\obj\Debug\Hades.CD_Main.resources

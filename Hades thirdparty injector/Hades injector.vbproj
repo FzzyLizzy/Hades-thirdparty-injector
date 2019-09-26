@@ -81,6 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CD_Main.Designer.vb">
+      <DependentUpon>CD_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CD_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dims.vb" />
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
@@ -124,6 +130,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CD_Main.resx">
+      <DependentUpon>CD_Main.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>

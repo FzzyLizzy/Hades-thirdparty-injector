@@ -248,7 +248,7 @@ Grand Theft Auto V Not found")
         Update_Menu()
     End Sub
     Dim bigForm As Boolean
-    Public Sub switchsize() Handles MyBase.DoubleClick
+    Public Sub switchsize() Handles FlowLayoutPanel1.DoubleClick
         bigForm = My.Settings.Big_Form
         If bigForm = False Then
             bigForm = True
@@ -262,13 +262,13 @@ Grand Theft Auto V Not found")
         My.Settings.Save()
     End Sub
     Public Sub BetaLoader()
-
+        Dim bool As Boolean = My.Settings.Beta
+        CD_Button.Visible = bool
     End Sub
-
-    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs)
-        Dim SecondForm As New Splash
+    Private Sub CD_Button_Click(sender As Object, e As EventArgs) Handles CD_Button.Click
+        MessageBox.Show("This is not nearly finished yet, a lot of bugs can occur. if you find a bug please post it as issues on Github")
+        Dim SecondForm As New CD_Main
         My.Settings.Save()
         SecondForm.Show()
-        Me.Hide()
     End Sub
 End Class
