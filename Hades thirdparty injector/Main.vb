@@ -264,4 +264,11 @@ Grand Theft Auto V Not found")
     Public Sub BetaLoader()
 
     End Sub
+
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs)
+        Dim SecondForm As New Splash
+        My.Settings.Save()
+        SecondForm.Show()
+        Me.Hide()
+    End Sub
 End Class
