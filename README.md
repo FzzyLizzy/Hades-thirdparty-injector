@@ -1,10 +1,11 @@
-![Online](https://img.shields.io/badge/Injector-Online-green.svg)
+![Online](https://img.shields.io/badge/Injector-Offline-red.svg)
 ![GitHub tag (latest by date)](https://img.shields.io/github/tag-date/DeadlyKltten/Hades-thirdparty-injector.svg?label=Version)
 ![GitHub last commit](https://img.shields.io/github/last-commit/DeadlyKltten/Hades-thirdparty-injector.svg)
 [![GitHub license](https://img.shields.io/github/license/DeadlyKltten/Hades-thirdparty-injector.svg)](https://github.com/DeadlyKltten/Hades-thirdparty-injector/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/DeadlyKltten/Hades-thirdparty-injector.svg)](https://github.com/DeadlyKltten/Hades-thirdparty-injector/issues)
 
-# Hades thirdparty injector 
+# Development stopped
+## Hades thirdparty injector 
 [Download Injector](https://github.com/DeadlyKltten/Hades-thirdparty-injector/releases/latest)
 
 ### Why Third Party
