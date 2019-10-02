@@ -271,4 +271,8 @@ Grand Theft Auto V Not found")
         My.Settings.Save()
         SecondForm.Show()
     End Sub
+
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+        Process.Start("https://discord.gg/Quz8pfh")
+    End Sub
 End Class
